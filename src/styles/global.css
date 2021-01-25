@@ -26,6 +26,9 @@ p {
   line-height: 1.5rem;
   text-align: justify;
 }
+li {
+  font-family: "Open Sans", sans-serif;
+}
 
 small,
 sup {
@@ -61,9 +64,12 @@ header {
   max-width: 1000px;
   flex-direction: column;
 }
-
-.link {
-  text-decoration: underline;
+.spacer {
+  height: 6rem;
+  width: 100%;
+}
+.link-important {
+  font-weight: 600;
 }
 
 a.link-background {
@@ -149,11 +155,11 @@ footer .width-limiter {
   flex-direction: column;
 }
 
-footer .width-limiter>div {
+footer .width-limiter > div {
   margin-bottom: 2rem;
 }
 
-footer .width-limiter>div>div {
+footer .width-limiter > div > div {
   margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -185,7 +191,6 @@ footer a:hover {
 .profile-blue {
   padding: 2.6rem !important;
   margin: 1rem 0.5rem;
-  width: 340px;
   height: 350px;
 }
 
@@ -241,10 +246,13 @@ a:hover .profile-blue {
   .student-grid {
     flex-direction: row;
   }
+  .profile-blue {
+    width: 340px;
+  }
 }
 
 @media (min-width: 800px) {
-  footer .width-limiter>div>div {
+  footer .width-limiter > div > div {
     margin-bottom: 0;
   }
 

@@ -22,9 +22,7 @@ export default function Home() {
   )
   return (
     <Layout>
-      <div
-      className="landing-image"
-      >
+      <div className="landing-image">
         <Img
           critical={true}
           fadeIn={false}
@@ -57,7 +55,7 @@ export default function Home() {
             se tak součástí tamní kultury. Poznáš americké zvyky, seznámíš se s
             novými kamarády a určitě na celý pobyt nikdy nezapomeneš!
           </p>
-          <Link style={{ fontWeight: 600 }} to="/our-students">
+          <Link className="link-important" to="/our-students">
             Jak pobyt vidí naši studenti &#8594;
           </Link>
           <h2 style={{ margin: "4rem 0 1rem" }}>Podmínky účasti</h2>
@@ -69,9 +67,10 @@ export default function Home() {
               Chceš nám pomáhat spojovat Tábor a Orindu
             </li>
           </ul>
-          <Link style={{ fontWeight: 600 }} to="/posts">
+          <Link className="link-important" to="/posts">
             Kompletní pomdínky účasti &#8594;
           </Link>
+
           <h2 style={{ margin: "4rem 0 2rem" }}>Jak soutěž probíhá?</h2>
           <h3>První kolo</h3>
           <h5 style={{ margin: "0" }}>listopad - prosinec</h5>
@@ -80,17 +79,17 @@ export default function Home() {
             úkol napsat motivační esej na přibližně 2 normostrany.
           </p>
           <h3 style={{ margin: "2rem 0 1rem" }}>Druhé kolo</h3>
-          <h5 style={{ margin: "0" }}>přibližně únor/březen</h5>
+          <h5 style={{ margin: "0" }}>únor/březen</h5>
           <p>
-            Pokud bude tvoje esej vyhovovat zadání, pozveme Tě do druhého kola.
+            Pokud bude tvoje esej vyhovovat zadání, pozveme tě do druhého kola.
             Bude tě čekat ústní pohovor v angličtině, kde se budeme ptát na
-            doplňující informace k eseji. Chceme Tě tím více poznat, s komisí
+            doplňující informace k eseji. Chceme tě tím více poznat, s komisí
             budeš mluvit asi 20 minut.
           </p>
           <h3 style={{ margin: "2rem 0 1rem" }}>Odlet do Orindy</h3>
-          <h5 style={{ margin: "0" }}>přibližně srpen</h5>
+          <h5 style={{ margin: "0" }}>srpen</h5>
           <p>
-            Porota v Táboře dává doporučení porotě v Orindě, pokud si Tě tedy
+            Porota v Táboře dává doporučení porotě v Orindě, pokud si tě tedy
             vyberou v Orindě, tak se můžeš se těšit na nezapomenutelné zážitky v
             Kalifornii!
           </p>

@@ -7,17 +7,13 @@ import { Link } from "gatsby"
 export default () => (
   <Layout>
     <Container>
-      <Link className="link" to="/our-students/">
+      <Link className="link-important" to="/our-students/">
         &#8592; zpět na všechny studenty
       </Link>
       <div className="profile">
         <img src={ProfilePic} alt="Michael Čížek" />
         <h1>Michael Čížek</h1>
-        <small>Medailonek 2013/2014</small>
-        <br></br>
-        <a className="link" href="https://placekitten.com/300/300">
-          Odkaz na Michaelův blog
-        </a>
+        <small>Medailonek 2012/2013</small>
         <h2>Questionnaire</h2>
         <h3>What was your host family’s name? Any host brothers or sisters?</h3>
         <p>

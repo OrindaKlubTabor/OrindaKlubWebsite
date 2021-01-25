@@ -8,11 +8,6 @@ export default function faq() {
     <Layout>
       <Container>
         <Header headerText="FAQ - nejčastější otázky"></Header>
-        <h2>Pro koho je tato soutěž určena?</h2>
-        <p>
-          Pro studenty prvních, druhých a třetích ročníků středních škol v
-          Táboře. (viz. podmínky účasti)
-        </p>
         <h2>Kde jsou studenti ubytováni?</h2>
         <p>
           Studenti jsou vždy ubytováni u hostitelských rodin vybíraných tak, aby

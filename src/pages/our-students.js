@@ -7,7 +7,7 @@ import Cizek from "../images/students/michael-cizek.png"
 import Kraus from "../images/students/adam-kraus.png"
 import Stoklasa from "../images/students/erik-stoklasa.png"
 import Barlogh from "../images/students/karel-barlogh.png"
-import Matejcek from "../images/students/martin-matejcek.png"
+import Matejcek from "../images/students/martin-matejicek.png"
 import Kopecka from "../images/students/michaela-kopecka.png"
 import Vasek from "../images/students/michal-vasek.png"
 import Rayova from "../images/students/roxana-rayova.png"
@@ -49,44 +49,44 @@ export default () => (
         name="Erik Stoklasa"
         year="2019/2020"
         src={Stoklasa}
-        page="michael-cizek"
+        page="erik-stoklasa"
       ></Student>
       <Student
         name="Marie Růžičková"
         year="2018/2019"
         src={Ruzickova}
-        page="michael-cizek"
+        page="marie-ruzickova"
       ></Student>
       <Student
         name="Marek Vybíral"
         year="2017/2018"
         src={Vybiral}
-        page="michael-cizek"
+        page="marek-vybiral"
       ></Student>
       <Student
         name="Adam Kraus"
         year="2016/2017"
         src={Kraus}
-        page="michael-cizek"
+        page="adam-kraus"
       ></Student>
       <Student
         name="Karel Balogh"
         year="2015/2016"
         src={Barlogh}
-        page="michael-cizek"
+        page="karel-barlogh"
       ></Student>
 
       <Student
         name="Marek Fencl"
         year="2014/2015"
         src={Fencl}
-        page="michael-cizek"
+        page="marek-fencl"
       ></Student>
       <Student
         name="Roxana Rayová"
         year="2013/2014"
         src={Rayova}
-        page="michael-cizek"
+        page="roxana-rayova"
       ></Student>
       <Student
         name="Michael Čížek"
@@ -98,25 +98,25 @@ export default () => (
         name="Martin Matějček"
         year="2010/2011"
         src={Matejcek}
-        page="michael-cizek"
+        page="martin-matejicek"
       ></Student>
       <Student
         name="Michaela Kopecká"
         year="2009/2010"
         src={Kopecka}
-        page="michael-cizek"
+        page="michaela-kopecka"
       ></Student>
       <Student
         name="Michal Vašek"
         year="2006/2007"
         src={Vasek}
-        page="michael-cizek"
+        page="michal-vasek"
       ></Student>
       <Student
         name="Veronika Štěpková"
         year="2005/2006"
         src={Stepkova}
-        page="michael-cizek"
+        page="veronika-stepkova"
       ></Student>
     </div>
   </Layout>

@@ -14,7 +14,7 @@ export default function Posts({ data }) {
             <span>{post.createdAt}</span>
             <br></br>
             <br></br>
-            <Link to={`/${post.slug}`}>Zobrazit příspěvek &#8594;</Link>
+            <Link className="link-important" to={`/${post.slug}`}>Zobrazit příspěvek &#8594;</Link>
           </div>
         ))}
       </Container>
