@@ -27,7 +27,6 @@ module.exports = {
         spaceId: `1q7ryjezrt6k`,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         downloadLocal: true,
-        host: `preview.contentful.com`,
       },
     },
   ],
