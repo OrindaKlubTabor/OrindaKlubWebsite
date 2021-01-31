@@ -10,11 +10,21 @@ export default function Home() {
     graphql`
       query BackgroundImg {
         image: file(relativePath: { eq: "background.png" }) {
-          id
           childImageSharp {
             fluid(quality: 100, maxWidth: 1500) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
+          }
+        }
+        posts: allContentfulPost(
+          limit: 1
+          sort: { fields: createdAt, order: DESC }
+        ) {
+          nodes {
+            createdAt(fromNow: true, locale: "cs")
+            title
+            slug
+            description
           }
         }
       }
@@ -38,11 +48,11 @@ export default function Home() {
       </div>
       <div className="latest">
         <Container>
-          <h2>Spouštíme soutěž za rok 2021</h2>
+          <h2>{data.posts.nodes[0].title}</h2>
           <p style={{ margin: "0 0 3rem" }}>
-            Do konce přihlašování zbývá pár dnů, tak neváhej a přihlaš se!
+            {data.posts.nodes[0].description}
           </p>
-          <Link className="link-background" to="/posts">
+          <Link className="link-background" to={data.posts.nodes[0].slug}>
             Zobrazit více &#8594;
           </Link>
         </Container>

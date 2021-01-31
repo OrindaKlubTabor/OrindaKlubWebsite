@@ -14,7 +14,7 @@ export default function Layout({ children }) {
     }
   `)
   return (
-    <div>
+    <div className="footer-parent">
       <header>
         <Link to="/">{data.site.siteMetadata.title}</Link>
         <Link to="/about">O nás</Link>

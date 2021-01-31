@@ -24,7 +24,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.5rem;
-  text-align: justify;
+  text-align: left;
 }
 li {
   font-family: "Open Sans", sans-serif;
@@ -140,13 +140,20 @@ header a {
   max-width: 1250px;
   margin: 0 auto;
 }
-
+.footer-parent {
+  padding-bottom: 500px;
+  min-height: 100vh;
+  position: relative;
+}
 footer {
   background: #002868;
   padding: 4rem 1rem;
   color: white;
   text-align: center;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 500px;
 }
 
 footer .width-limiter {
@@ -241,7 +248,11 @@ a:hover .profile-blue {
   margin: 0 auto;
   justify-content: space-around;
 }
-
+@media (min-width: 400px) {
+  p {
+    text-align: justify;
+  }
+}
 @media (min-width: 600px) {
   .student-grid {
     flex-direction: row;
@@ -252,6 +263,12 @@ a:hover .profile-blue {
 }
 
 @media (min-width: 800px) {
+  .footer-parent {
+    padding-bottom: 275px;
+  }
+  footer {
+    height: 275px;
+  }
   footer .width-limiter > div > div {
     margin-bottom: 0;
   }

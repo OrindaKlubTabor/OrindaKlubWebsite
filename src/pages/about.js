@@ -55,7 +55,7 @@ export default function About() {
           organizace Orinda/Tabor Sister City Foundation.
         </p>
         <h2>O Orindě</h2>
-        <img src={Orinda} alt="Orinda" />
+        <img src={Orinda} alt="Orinda" style={{ width: "100%" }} />
         <p>
           Městečko Orinda, které leží nedaleko amerického San Francisca v
           Kalifornii, je v pořadí třetím partnerským městem Tábora. Ačkoliv se
