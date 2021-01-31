@@ -9,7 +9,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Container>
-        <Link className="link-important" to="/posts">
+        <Link className="link-important" to="/blog">
           &#8592; Zpět na všechny příspěvky
         </Link>
         <h1>{data.contentfulPost.title}</h1>
@@ -26,7 +26,7 @@ const BlogPost = ({ data }) => {
               ),
             },
           })}
-          <Link className="link-important" to="/posts">
+          <Link className="link-important" to="/blog">
             &#8592; Zpět na všechny příspěvky
           </Link>
         </div>
