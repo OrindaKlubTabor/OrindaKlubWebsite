@@ -225,10 +225,6 @@ a:hover .profile-blue {
   padding: 0.5rem 0;
 }
 
-.profile img {
-  max-width: 300px;
-}
-
 .profile small {
   font-family: "Open Sans";
   font-size: 0.8rem;

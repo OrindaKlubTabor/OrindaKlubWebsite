@@ -21,7 +21,7 @@ export default function Home() {
           sort: { fields: createdAt, order: DESC }
         ) {
           nodes {
-            createdAt(fromNow: true, locale: "cs")
+            createdAt(formatString: "D. MMMM YYYY", locale: "cs")
             title
             slug
             description
@@ -50,10 +50,10 @@ export default function Home() {
         <Container>
           <h2>{data.posts.nodes[0].title}</h2>
           <p style={{ margin: "0 0 3rem" }}>
-            {data.posts.nodes[0].description}
+            {data.posts.nodes[0].createdAt} | {data.posts.nodes[0].description}
           </p>
           <Link className="link-background" to={data.posts.nodes[0].slug}>
-            Zobrazit více &#8594;
+            Zobrazit příspěvek &#8594;
           </Link>
         </Container>
       </div>

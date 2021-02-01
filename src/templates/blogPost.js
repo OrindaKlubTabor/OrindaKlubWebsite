@@ -39,7 +39,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
-      createdAt(formatString: "DD. MMMM YYYY, HH:mm", locale: "cs")
+      createdAt(formatString: "D. MMMM YYYY, HH:mm", locale: "cs")
       content {
         json
       }

@@ -92,7 +92,7 @@ export const data = graphql`
     ) {
       nodes {
         description
-        createdAt(formatString: "DD. MMMM YYYY", locale: "cs")
+        createdAt(formatString: "D. MMMM YYYY", locale: "cs")
         slug
         title
       }

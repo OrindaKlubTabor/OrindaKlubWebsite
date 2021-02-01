@@ -23,6 +23,7 @@ export default function Layout({ children }) {
       <header>
         <Link to="/">{data.site.siteMetadata.title}</Link>
         <Link to="/about">O nás</Link>
+        <Link to="/blog">Aktuality</Link>
         <Link to="/our-students">Naši studenti</Link>
         <Link to="/faq">FAQ</Link>
         <Link
