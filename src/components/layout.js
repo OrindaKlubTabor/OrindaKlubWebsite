@@ -15,6 +15,11 @@ export default function Layout({ children }) {
   `)
   return (
     <div className="footer-parent">
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "3a6090d2ab3b4599b9f7344540de87c7"}'
+      ></script>
       <header>
         <Link to="/">{data.site.siteMetadata.title}</Link>
         <Link to="/about">O nás</Link>
