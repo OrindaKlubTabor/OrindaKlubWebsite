@@ -50,7 +50,7 @@ export default function Home() {
         <Container>
           <h2>{data.posts.nodes[0].title}</h2>
           <p style={{ margin: "0 0 3rem" }}>
-            {data.posts.nodes[0].createdAt} | {data.posts.nodes[0].description}
+            {data.posts.nodes[0].createdAt} • {data.posts.nodes[0].description}
           </p>
           <Link className="link-background" to={data.posts.nodes[0].slug}>
             Zobrazit příspěvek &#8594;
@@ -77,9 +77,9 @@ export default function Home() {
               Chceš nám pomáhat spojovat Tábor a Orindu
             </li>
           </ul>
-          <Link className="link-important" to="/posts">
+          <a className="link-important" href="/pravidla-souteze.pdf">
             Kompletní pomdínky účasti &#8594;
-          </Link>
+          </a>
 
           <h2 style={{ margin: "4rem 0 2rem" }}>Jak soutěž probíhá?</h2>
           <h3>První kolo</h3>

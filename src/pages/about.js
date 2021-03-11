@@ -55,7 +55,7 @@ export default function About() {
           organizace Orinda/Tabor Sister City Foundation.
         </p>
         <h2>O Orindě</h2>
-        <img src={Orinda} alt="Orinda" style={{ width: "100%" }} />
+
         <p>
           Městečko Orinda, které leží nedaleko amerického San Francisca v
           Kalifornii, je v pořadí třetím partnerským městem Tábora. Ačkoliv se
@@ -69,6 +69,7 @@ export default function About() {
           i lékařské stáže. Na rozvoji vztahů partnerských měst se podílejí i
           Rotary klub a Lions klub.
         </p>
+        <Img fluid={orindaMap} alt="Město Orinda" />
         <p>
           Americká Orinda je naším nejvzdálenějším partnerským městem. Toto
           městečko se svými cca 17 000 obyvateli leží ve státě California těsně
@@ -76,7 +77,6 @@ export default function About() {
           rozsahem služeb. Přestože Orinda leží nedaleko přilehlých městských
           částí, i nadále si udržela atmosféru malého města.
         </p>
-        <Img fadeIn={false} fluid={orindaMap} alt="Město Orinda" />
         <p>
           Orinda je velice mladé město. Ačkoli toto území bylo osídleno již od
           konce 19. století, město bylo oficiálně založeno až v roce 1985.
