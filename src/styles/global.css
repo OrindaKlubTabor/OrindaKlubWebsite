@@ -111,17 +111,17 @@ a.link-background:hover {
 .post img {
   max-height: 200px;
   object-fit: cover;
-  width: 200px;
-  padding-left: 1rem;
+  width: 100%;
 }
 .post a {
   margin: 0;
 }
 .post-container {
   display: flex;
+  flex-direction: column-reverse;
 }
 .post p {
-  margin-top: 0;
+  margin-top: 0.5rem;
   text-align: start;
 }
 .post-link:hover {
@@ -310,6 +310,15 @@ a:hover .profile-blue {
 }
 
 @media (min-width: 800px) {
+  .post img {
+    max-height: 200px;
+    object-fit: cover;
+    width: 200px;
+    padding-left: 1rem;
+  }
+  .post-container {
+    flex-direction: row;
+  }
   .footer-parent {
     padding-bottom: 275px;
   }

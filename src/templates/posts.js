@@ -31,7 +31,10 @@ export default class BlogList extends React.Component {
                     <p>
                       <strong>{node.createdAt}</strong> • {node.description}
                     </p>
-                    <Link className="post-link" to={`/${node.slug}`}>
+                    <Link
+                      className="post-link link-important"
+                      to={`/${node.slug}`}
+                    >
                       Zobrazit příspěvek &#8594;
                     </Link>
                   </div>
