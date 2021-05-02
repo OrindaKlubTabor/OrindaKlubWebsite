@@ -12,22 +12,22 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        
+
         <script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-D1XKJESN67"
-/>
-<script
-  dangerouslySetInnerHTML={{
-    __html: `
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-D1XKJESN67"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
     window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-D1XKJESN67');
   `,
-  }}
-/>
+          }}
+        />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

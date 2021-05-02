@@ -19,17 +19,39 @@ export default class BlogList extends React.Component {
         <Container>
           <h1>Všechny příspěvky</h1>
           {posts.map(node => (
-            <div style={{ margin: "3rem 0" }} key={node.slug}>
-              <h2 style={{ margin: "1rem 0" }}>{node.title}</h2>
-              <span>{node.createdAt}</span>
-              <br></br>
-              <span>{node.description}</span>
-              <br></br>
-              <br></br>
-              <Link className="link-important" to={`/${node.slug}`}>
-                Zobrazit příspěvek &#8594;
-              </Link>
-            </div>
+            <Link className="post-link" to={`/${node.slug}`}>
+              <div
+                className="post"
+                style={{ margin: "3rem 0" }}
+                key={node.slug}
+              >
+                <h2 style={{ margin: "1rem 0" }}>{node.title}</h2>
+                <div className="post-container">
+                  <div className="post-text-container">
+                    <p>
+                      <strong>{node.createdAt}</strong> • {node.description}
+                    </p>
+                    <Link className="post-link" to={`/${node.slug}`}>
+                      Zobrazit příspěvek &#8594;
+                    </Link>
+                  </div>
+
+                  {node.thumbnail != null && (
+                    <picture>
+                      <source
+                        srcset={node.thumbnail.fixed.srcSetWebp}
+                        type="image/webp"
+                      />
+                      <source
+                        srcset={node.thumbnail.fixed.srcSet}
+                        type="image/jpeg"
+                      />
+                      <img src={node.thumbnail.fixed.src} alt={node.title} />
+                    </picture>
+                  )}
+                </div>
+              </div>
+            </Link>
           ))}
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             {isFirst ? (
@@ -95,6 +117,13 @@ export const data = graphql`
         createdAt(formatString: "D. MMMM YYYY", locale: "cs")
         slug
         title
+        thumbnail {
+          fixed(quality: 75, width: 200) {
+            src
+            srcSet
+            srcSetWebp
+          }
+        }
       }
     }
   }

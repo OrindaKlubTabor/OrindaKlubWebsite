@@ -64,22 +64,25 @@ header {
   flex-direction: column;
   justify-content: center;
 }
-header .hamburger-react{
+header .hamburger-react {
   align-self: flex-end;
 }
-.navbar-top{
+.navbar-top {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-.navbar-top a {font-size: 1.2rem;}
+.navbar-top a {
+  font-size: 1.2rem;
+  padding: 0;
+}
 
-header .links{
+header .links {
   display: none;
   justify-content: space-between;
   flex-direction: column;
 }
-.links.open{
+.links.open {
   display: flex;
 }
 header .links a {
@@ -104,6 +107,33 @@ a.link-background {
 a.link-background:hover {
   background: transparent;
   color: white;
+}
+.post img {
+  max-height: 200px;
+  object-fit: cover;
+  width: 200px;
+  padding-left: 1rem;
+}
+.post a {
+  margin: 0;
+}
+.post-container {
+  display: flex;
+}
+.post p {
+  margin-top: 0;
+  text-align: start;
+}
+.post-link:hover {
+  text-decoration: none;
+}
+.post-link:hover a {
+  text-decoration: underline;
+}
+.post-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header a {
@@ -264,6 +294,7 @@ a:hover .profile-blue {
   margin: 0 auto;
   justify-content: space-around;
 }
+
 @media (min-width: 400px) {
   p {
     text-align: justify;
@@ -292,16 +323,19 @@ a:hover .profile-blue {
   footer .width-limiter {
     flex-direction: row;
   }
-  .navbar-top a {font-size: 1rem;}
-  .navbar-top{
+  .navbar-top a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-top {
     margin-bottom: 0;
   }
-  header{
+  header {
     flex-direction: row;
   }
-header .hamburger-react{
-  display: none;
-}
+  header .hamburger-react {
+    display: none;
+  }
 
   header .links {
     flex-direction: row;
@@ -309,12 +343,12 @@ header .hamburger-react{
     justify-content: space-between;
   }
 
-  header .links a{
+  header .links a {
     margin: auto 0;
   }
 
   header a {
-    margin: auto 0;
+    padding: 0.5rem;
   }
 
   .landing-image {
@@ -336,5 +370,10 @@ header .hamburger-react{
   .popover a {
     position: absolute;
     width: auto;
+  }
+}
+@media (min-width: 900px) {
+  header a {
+    padding: 0.5rem 1rem;
   }
 }
