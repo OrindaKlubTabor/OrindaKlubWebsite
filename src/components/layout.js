@@ -2,8 +2,11 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import TaborLogo from "../images/tabor-logo.png"
 import OrindaLogo from "../images/orinda-logo.png"
+import Hamburger from 'hamburger-react'
+import {useState} from "react"
 
 export default function Layout({ children }) {
+  const [isOpen, setOpen] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -20,8 +23,13 @@ export default function Layout({ children }) {
         src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "3a6090d2ab3b4599b9f7344540de87c7"}'
       ></script>
-      <header>
-        <Link to="/">{data.site.siteMetadata.title}</Link>
+      
+      <header className="navbar">
+        <div className="navbar-top">
+      <Link to="/">{data.site.siteMetadata.title}</Link>
+        <Hamburger toggled={isOpen} toggle={setOpen} />
+        </div>
+        <div className={isOpen ? "links open" : "links"}>
         <Link to="/about">O nás</Link>
         <Link to="/blog">Aktuality</Link>
         <Link to="/our-students">Naši studenti</Link>
@@ -31,7 +39,7 @@ export default function Layout({ children }) {
           to="/"
         >
           Přihlásit se do soutěže
-        </Link>
+        </Link></div>
       </header>
       {children}
       <footer>

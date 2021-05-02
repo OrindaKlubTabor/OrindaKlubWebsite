@@ -59,10 +59,31 @@ header {
   background-color: white;
   margin: 0 auto;
   padding: 1rem;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header .hamburger-react{
+  align-self: flex-end;
+}
+.navbar-top{
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
+  margin-bottom: 1rem;
+}
+.navbar-top a {font-size: 1.2rem;}
+
+header .links{
+  display: none;
+  justify-content: space-between;
   flex-direction: column;
+}
+.links.open{
+  display: flex;
+}
+header .links a {
+  margin-bottom: 0.5rem;
 }
 .spacer {
   height: 6rem;
@@ -86,7 +107,6 @@ a.link-background:hover {
 }
 
 header a {
-  margin-bottom: 0.5rem;
   padding: 0.5rem 1rem;
 }
 
@@ -272,9 +292,25 @@ a:hover .profile-blue {
   footer .width-limiter {
     flex-direction: row;
   }
-
-  header {
+  .navbar-top a {font-size: 1rem;}
+  .navbar-top{
+    margin-bottom: 0;
+  }
+  header{
     flex-direction: row;
+  }
+header .hamburger-react{
+  display: none;
+}
+
+  header .links {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .links a{
+    margin: auto 0;
   }
 
   header a {
