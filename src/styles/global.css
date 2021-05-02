@@ -135,6 +135,12 @@ a.link-background:hover {
   flex-direction: column;
   justify-content: space-between;
 }
+.post-img-center {
+  text-align: center;
+}
+.post-img-center img {
+  width: 100%;
+}
 
 header a {
   padding: 0.5rem 1rem;
@@ -306,6 +312,9 @@ a:hover .profile-blue {
   }
   .profile-blue {
     width: 340px;
+  }
+  .post-img-center img {
+    width: auto;
   }
 }
 

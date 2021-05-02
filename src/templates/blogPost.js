@@ -13,7 +13,25 @@ const BlogPost = ({ data }) => {
           &#8592; Zpět na všechny příspěvky
         </Link>
         <h1>{data.contentfulPost.title}</h1>
-        <p>Přidáno: {data.contentfulPost.createdAt}</p>
+        <p>{data.contentfulPost.createdAt}</p>
+        {data.contentfulPost.thumbnail != null && (
+          <div className="post-img-center">
+            <picture>
+              <source
+                srcset={data.contentfulPost.thumbnail.fixed.srcSetWebp}
+                type="image/webp"
+              />
+              <source
+                srcset={data.contentfulPost.thumbnail.fixed.srcSet}
+                type="image/jpeg"
+              />
+              <img
+                src={data.contentfulPost.thumbnail.fixed.src}
+                alt={data.contentfulPost.title}
+              />
+            </picture>
+          </div>
+        )}
         <div style={{ marginTop: "3rem" }}>
           {documentToReactComponents(data.contentfulPost.content.json, {
             renderNode: {
@@ -42,6 +60,13 @@ export const pageQuery = graphql`
       createdAt(formatString: "D. MMMM YYYY, HH:mm", locale: "cs")
       content {
         json
+      }
+      thumbnail {
+        fixed(quality: 90, width: 500) {
+          src
+          srcSet
+          srcSetWebp
+        }
       }
     }
   }
