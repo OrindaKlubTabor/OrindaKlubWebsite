@@ -276,6 +276,10 @@ a:hover .profile-blue {
   color: #002868;
 }
 
+.profile img {
+  max-width: min(325px, 100%);
+}
+
 .profile {
   text-align: center;
   padding: 0.5rem 0;
