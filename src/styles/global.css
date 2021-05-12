@@ -108,6 +108,14 @@ a.link-background:hover {
   background: transparent;
   color: white;
 }
+.popup {
+  width: 100%;
+  color: white;
+  height: 100%;
+  background-color: #cb9b15;
+  padding: 1rem;
+  text-align: center;
+}
 .post img {
   max-height: 200px;
   object-fit: cover;

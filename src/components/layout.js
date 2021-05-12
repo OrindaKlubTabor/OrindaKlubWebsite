@@ -4,9 +4,12 @@ import TaborLogo from "../images/tabor-logo.png"
 import OrindaLogo from "../images/orinda-logo.png"
 import Hamburger from "hamburger-react"
 import { useState } from "react"
+import { formatDistance } from "date-fns"
+import { cs } from "date-fns/locale"
 
 export default function Layout({ children }) {
   const [isOpen, setOpen] = useState(false)
+  const [displayPopup, setDisplayPopup] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -36,12 +39,25 @@ export default function Layout({ children }) {
           <Link to="/faq">FAQ</Link>
           <Link
             style={{ background: "#002868", color: "white", padding: "1rem" }}
-            to="/"
+            to="#"
+            onClick={() => {
+              displayPopup ? setDisplayPopup(false) : setDisplayPopup(true)
+            }}
           >
             Přihlásit se do soutěže
           </Link>
         </div>
       </header>
+      {displayPopup && (
+        <div className="popup">
+          Soutěž zatím není spuštěná, přihlašování začne
+          {" " +
+            formatDistance(new Date("2021/11/01"), new Date(), {
+              addSuffix: true,
+              locale: cs,
+            })}
+        </div>
+      )}
       {children}
       <footer>
         <div className="width-limiter">
