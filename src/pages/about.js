@@ -2,7 +2,6 @@ import React from "react"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Container from "../components/container"
-import Orinda from "../other-media/orinda.gif"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
