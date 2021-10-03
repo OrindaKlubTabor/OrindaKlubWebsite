@@ -6,10 +6,11 @@ import Hamburger from "hamburger-react"
 import { useState } from "react"
 import { formatDistance } from "date-fns"
 import { cs } from "date-fns/locale"
+import { Helmet } from "react-helmet"
 
 export default function Layout({ children }) {
   const [isOpen, setOpen] = useState(false)
-  const [displayPopup, setDisplayPopup] = useState(false)
+  const [displayPopup, setDisplayPopup] = useState(true)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -26,7 +27,13 @@ export default function Layout({ children }) {
         src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "3a6090d2ab3b4599b9f7344540de87c7"}'
       ></script>
-
+      <Helmet>
+        <title>Orinda Klub Tábor</title>
+        <meta
+          name="description"
+          content="Každý rok pořádáme soutěž o studium v Kalifornii. Přidej se a pojeď do Orindy!"
+        />
+      </Helmet>
       <header className="navbar">
         <div className="navbar-top">
           <Link to="/">{data.site.siteMetadata.title}</Link>
@@ -39,24 +46,14 @@ export default function Layout({ children }) {
           <Link to="/faq">FAQ</Link>
           <Link
             style={{ background: "#002868", color: "white", padding: "1rem" }}
-            to="#"
-            onClick={() => {
-              displayPopup ? setDisplayPopup(false) : setDisplayPopup(true)
-            }}
+            to="/application-form"
           >
             Přihlásit se do soutěže
           </Link>
         </div>
       </header>
       {displayPopup && (
-        <div className="popup">
-          Soutěž zatím není spuštěná, přihlašování začne
-          {" " +
-            formatDistance(new Date("2021/11/01"), new Date(), {
-              addSuffix: true,
-              locale: cs,
-            })}
-        </div>
+        <div className="popup">Přihlašování do soutěže 2021 je spuštěné!</div>
       )}
       {children}
       <footer>
@@ -70,7 +67,9 @@ export default function Layout({ children }) {
             <div style={{ padding: "0 0 2rem 0" }}>
               <a href="mailto:info@orindaklub.com">info@orindaklub.com</a>
               <a href="https://facebook.com/OrindaKlub">Facebook</a>
-              <a href="https://facebook.com/OrindaKlub">Instagram</a>
+              <a href="https://www.instagram.com/denisa.d_orinda2021">
+                Instagram
+              </a>
             </div>
             <div>
               &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
