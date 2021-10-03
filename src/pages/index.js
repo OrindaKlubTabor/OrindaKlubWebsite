@@ -80,13 +80,25 @@ export default function Home() {
           <a className="link-important" href="/pravidla-souteze.pdf">
             Kompletní pomdínky účasti &#8594;
           </a>
-
-          <h2 style={{ margin: "4rem 0 2rem" }}>Jak soutěž probíhá?</h2>
+          <Link
+            style={{
+              background: "#002868",
+              color: "white",
+              padding: "1rem",
+              margin: "1rem 0 0",
+              display: "block",
+              maxWidth: "20rem",
+            }}
+            to="/application-form"
+          >
+            Přihlásit se do soutěže &#8594;
+          </Link>
+          <h2 style={{ margin: "2rem 0 2rem" }}>Jak soutěž probíhá?</h2>
           <h3>První kolo</h3>
-          <h5 style={{ margin: "0" }}>listopad - prosinec</h5>
+          <h5 style={{ margin: "0" }}>4. října - 17. prosinec</h5>
           <p>
             Každý rok na podzim začíná první kolo soutěže. V tomto kole máš za
-            úkol napsat motivační esej na přibližně 2 normostrany.
+            úkol napsat motivační esej v angličtině na přibližně 2 normostrany.
           </p>
           <h3 style={{ margin: "2rem 0 1rem" }}>Druhé kolo</h3>
           <h5 style={{ margin: "0" }}>únor/březen</h5>
