@@ -55,7 +55,7 @@ export default function faq() {
         <br></br>
         <p>
           Pokud se budete chtít na cokoli zeptat, napište nám na tento email:
-          info@orindaklub.cz
+          orindaklub@gmail.com
         </p>
       </Container>
     </Layout>

@@ -65,7 +65,7 @@ export default function Layout({ children }) {
           </div>
           <div>
             <div style={{ padding: "0 0 2rem 0" }}>
-              <a href="mailto:info@orindaklub.cz">info@orindaklub.cz</a>
+              <a href="mailto:orindaklub@gmail.com">orindaklub@gmail.com</a>
               <a href="https://facebook.com/OrindaKlub">Facebook</a>
               <a href="https://www.instagram.com/denisa.d_orinda2021">
                 Instagram
