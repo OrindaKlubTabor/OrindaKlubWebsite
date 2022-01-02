@@ -53,7 +53,7 @@ export default function Layout({ children }) {
         </div>
       </header>
       {displayPopup && (
-        <div className="popup">Přihlašování do soutěže 2021 je spuštěné!</div>
+        <div className="popup">Přihlašování do soutěže 2021 je ukončené, další ročník startuje na podzim 2022</div>
       )}
       {children}
       <footer>
