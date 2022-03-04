@@ -3,9 +3,13 @@ import Layout from "../../components/layout"
 import Container from "../../components/container"
 import ProfilePic from "../../images/students/marie-ruzickova.png"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 export default () => (
   <Layout>
+    <Helmet>
+        <title>Marie Růžičková - Orinda Klub Tábor</title>
+    </Helmet>
     <Container>
       <Link className="link-important" to="/our-students/">
         &#8592; zpět na všechny studenty

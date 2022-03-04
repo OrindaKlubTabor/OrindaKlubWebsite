@@ -3,16 +3,20 @@ import Layout from "../../components/layout"
 import Container from "../../components/container"
 import ProfilePic from "../../images/students/veronika-stepkova.png"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 export default () => (
   <Layout>
+    <Helmet>
+        <title>Veronika Štěpková - Orinda Klub Tábor</title>
+    </Helmet>
     <Container>
       <Link className="link-important" to="/our-students/">
         &#8592; zpět na všechny studenty
       </Link>
       <div className="profile">
-        <img src={ProfilePic} alt="Veronika Štěpková" />
-        <h1>Veronika Štěpková</h1>
+        <img src={ProfilePic} alt="Veronika Štěpková" />
+        <h1>Veronika Štěpková</h1>
         <small>Medailonek 2005/06</small>
         <br></br>
         <h2>Questionnaire</h2>

@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet"
 
 export default function Layout({ children }) {
   const [isOpen, setOpen] = useState(false)
-  const [displayPopup, setDisplayPopup] = useState(true)
+  const [displayPopup, setDisplayPopup] = useState(false)
   const data = useStaticQuery(graphql`
     query {
       site {
