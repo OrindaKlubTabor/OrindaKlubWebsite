@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet"
 export default () => (
   <Layout>
     <Helmet>
-        <title>Denisa Dvořáková - Orinda Klub Tábor</title>
+      <title>Denisa Dvořáková - Orinda Klub Tábor</title>
     </Helmet>
     <Container>
       <Link className="link-important" to="/our-students/">
@@ -19,10 +19,16 @@ export default () => (
         <h1>Denisa Dvořáková</h1>
         <small>Medailonek 2021/22</small>
         <br></br>
-        <a className="link-important" href="https://www.instagram.com/denisa.d_orinda2021">
+        <a
+          className="link-important"
+          href="https://www.instagram.com/denisa.d_orinda2021"
+        >
           Odkaz na Denisy Instagram →
         </a>
-        <p>Denisa je momentálně v Orindě a vrací se v lednu 2022. Její dobrodružství můžete sledovat na Instagramu, kam přidává své dojmy z Kalifornie.</p>
+        <p>
+          Dobrodružství Denisy můžete sledovat na Instagramu, kam přidávala své
+          dojmy a zážitky z Kalifornie.
+        </p>
       </div>
     </Container>
   </Layout>

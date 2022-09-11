@@ -4,8 +4,8 @@ import TaborLogo from "../images/tabor-logo.png"
 import OrindaLogo from "../images/orinda-logo.png"
 import Hamburger from "hamburger-react"
 import { useState } from "react"
-import { formatDistance } from "date-fns"
-import { cs } from "date-fns/locale"
+//import { formatDistance } from "date-fns"
+//import { cs } from "date-fns/locale"
 import { Helmet } from "react-helmet"
 
 export default function Layout({ children }) {
@@ -53,7 +53,10 @@ export default function Layout({ children }) {
         </div>
       </header>
       {displayPopup && (
-        <div className="popup">Přihlašování do soutěže 2021 je ukončené, další ročník startuje na podzim 2022</div>
+        <div className="popup">
+          Přihlašování do soutěže 2021 je ukončené, další ročník startuje na
+          podzim 2022
+        </div>
       )}
       {children}
       <footer>
@@ -77,7 +80,7 @@ export default function Layout({ children }) {
           </div>
           <div>
             <a href="https://taborcz.eu/">
-              <img src={TaborLogo} alt="Tabor logo"></img>
+              <img src={TaborLogo} alt="Tábor logo"></img>
             </a>
           </div>
         </div>
