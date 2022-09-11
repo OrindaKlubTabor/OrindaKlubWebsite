@@ -4,13 +4,13 @@ import TaborLogo from "../images/tabor-logo.png"
 import OrindaLogo from "../images/orinda-logo.png"
 import Hamburger from "hamburger-react"
 import { useState } from "react"
-//import { formatDistance } from "date-fns"
-//import { cs } from "date-fns/locale"
+import { formatDistance } from "date-fns"
+import { cs } from "date-fns/locale"
 import { Helmet } from "react-helmet"
 
 export default function Layout({ children }) {
   const [isOpen, setOpen] = useState(false)
-  const [displayPopup, setDisplayPopup] = useState(false)
+  const [displayPopup, setDisplayPopup] = useState(true)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -54,8 +54,12 @@ export default function Layout({ children }) {
       </header>
       {displayPopup && (
         <div className="popup">
-          Přihlašování do soutěže 2021 je ukončené, další ročník startuje na
-          podzim 2022
+          Přihlašování do soutěže začne už
+          {" " +
+            formatDistance(new Date("2022/10/04"), new Date(), {
+              addSuffix: true,
+              locale: cs,
+            })}
         </div>
       )}
       {children}
