@@ -74,9 +74,7 @@ export default function Layout({ children }) {
             <div style={{ padding: "0 0 2rem 0" }}>
               <a href="mailto:orindaklub@gmail.com">orindaklub@gmail.com</a>
               <a href="https://facebook.com/OrindaKlub">Facebook</a>
-              <a href="https://www.instagram.com/denisa.d_orinda2021">
-                Instagram
-              </a>
+              <a href="https://www.instagram.com/sofieflaskovaa">Instagram</a>
             </div>
             <div>
               &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
