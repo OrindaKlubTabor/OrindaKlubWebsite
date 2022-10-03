@@ -50,7 +50,7 @@ export default function application() {
         </p>
         <p>
           Přihlašování do soutěže končí{" "}
-          <strong>17. prosince 2022 ve 23:59</strong>
+          <strong>v neděli 18. prosince 2022 ve 23:59</strong>
         </p>
       </Container>
     </Layout>
