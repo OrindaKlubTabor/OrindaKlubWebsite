@@ -54,12 +54,13 @@ export default function Layout({ children }) {
       </header>
       {displayPopup && (
         <div className="popup">
-          Přihlašování do soutěže začne už
+          Přihlašování do soutěže 2022 je spuštěné!
+          {/* Přihlašování do soutěže začne už
           {" " +
             formatDistance(new Date("2022/10/04"), new Date(), {
               addSuffix: true,
               locale: cs,
-            })}
+            })} */}
         </div>
       )}
       {children}

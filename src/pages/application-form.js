@@ -8,8 +8,8 @@ export default function application() {
   return (
     <Layout>
       <Container>
-        <Header headerText="Soutěž 2021 je ukončená"></Header>
-        <p>
+        <Header headerText="Přihlášení do soutěže"></Header>
+        {/* <p>
           Nemusíš se ale strachovat, na podzim 2022 spouštíme soutěž znovu.
           Zatím si můžeš přečíst, co budeš k přihlášce potřebovat. Určitě si
           také přečti některý z předcházejících příspěkvů našich studentů z
@@ -28,15 +28,17 @@ export default function application() {
           to="https://forms.gle/ey149oGRc99eiSBb8"
         >
           Odebírat novinky &#8594;
-        </Link>
+        </Link> */}
         <h2>Obsah přihlášky</h2>
         <p>
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
           měla obsahovat představení tebe, tvojí rodiny, koníčků a důvody proč
           chceš studovat na škole v USA, a jaká jsou tvoje očekávání od tohoto
           studijního pobytu. Doporučujeme ti přiložit alespoň jednu fotografii.
+          Dej si na eseji záležet, má totiž v celém procesu rozhodování velkou
+          váhu.
         </p>
-        {/* <h2>Kam odeslat přihlášku?</h2>
+        <h2>Kam odeslat přihlášku?</h2>
         <p>
           Eseje odesílejte ve formátu PDF na{" "}
           <strong>orindaklub@gmail.com</strong>
@@ -48,8 +50,8 @@ export default function application() {
         </p>
         <p>
           Přihlašování do soutěže končí{" "}
-          <strong>17. prosince 2021 ve 23:59</strong>
-        </p> */}
+          <strong>17. prosince 2022 ve 23:59</strong>
+        </p>
       </Container>
     </Layout>
   )

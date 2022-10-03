@@ -44,13 +44,20 @@ export default function faq() {
           jiných vážnějších problémů jsou vždy připraveni pomoci mj. i dva česky
           mluvící členové Sister City Foundation. Radu mohou kdykoli poskytnout
           také čeští kolegové z táborského Orinda Klubu, s kterými bude student
-          jistě v kontaktu (to samé platí i pro rodiče).{" "}
+          jistě v kontaktu (to samé platí i pro rodiče).
         </p>
         <h2>Jak častý kontakt s domovem se doporučuje?</h2>
         <p>
           Vzhledem k chtěnému a očekávanému jazykovému progresu se klade důraz
-          na to, aby student hovořil česky co nejméně. Tzn. že doporučená
-          perioda např. hovorů přes Skype či jiným způsobem je 14 dní.
+          na to, aby student hovořil česky co nejméně. Doporučujeme si s rodinou
+          volat přibližně jednou za 14 dní.
+        </p>
+        <h2>
+          Můžu se do soutěže přihlásit, i když jsem minulý rok nevyhrál/a?
+        </h2>
+        <p>
+          No jasně! Spousta studentů se hlásí do soutěže několikrát. Když se
+          přihlásíš několikrát, tak uvidíme, že ti na soutěži opravdu záleží.
         </p>
         <br></br>
         <p>
