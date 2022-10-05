@@ -44,9 +44,9 @@ export default function application() {
           <strong>orindaklub@gmail.com</strong>
         </p>
         <p>
-          Po přijetí emailu ti dáme vždy vědět, že jsme přihlášku přijali. Kdyby
-          si ale nedostal/a potvrzení do pár dnů, tak nám zkus napsat ještě
-          jendou na email nebo na naší Facebook stránku.
+          Po přijetí emailu ti dáme vždy vědět, že jsme přihlášku přijali.
+          Kdybys ale nedostal/a potvrzení do pár dnů, tak nám zkus napsat ještě
+          jednou na email nebo na naší Facebook stránku.
         </p>
         <p>
           Přihlašování do soutěže končí{" "}
