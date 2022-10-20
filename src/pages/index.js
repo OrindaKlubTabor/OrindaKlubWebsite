@@ -78,7 +78,7 @@ export default function Home() {
             </li>
           </ul>
           <a className="link-important" href="/pravidla-souteze.pdf">
-            Kompletní pomdínky účasti &#8594;
+            Kompletní podmínky účasti &#8594;
           </a>
           <Link
             style={{

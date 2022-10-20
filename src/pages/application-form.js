@@ -32,11 +32,11 @@ export default function application() {
         <h2>Obsah přihlášky</h2>
         <p>
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
-          měla obsahovat představení tebe, tvojí rodiny, koníčků a důvody proč
-          chceš studovat na škole v USA, a jaká jsou tvoje očekávání od tohoto
-          studijního pobytu. Doporučujeme ti přiložit alespoň jednu fotografii.
-          Dej si na eseji záležet, má totiž v celém procesu rozhodování velkou
-          váhu.
+          měla obsahovat představení tebe, tvojí rodiny a koníčků. Taky
+          nezapomeň připsat důvody, proč chceš studovat na škole v USA, a jaká
+          jsou tvoje očekávání od tohoto studijního pobytu. Doporučujeme ti
+          přiložit alespoň jednu fotografii. Dej si na eseji záležet, má totiž v
+          celém procesu rozhodování velkou váhu.
         </p>
         <h2>Kam odeslat přihlášku?</h2>
         <p>
@@ -46,7 +46,7 @@ export default function application() {
         <p>
           Po přijetí emailu ti dáme vždy vědět, že jsme přihlášku přijali.
           Kdybys ale nedostal/a potvrzení do pár dnů, tak nám zkus napsat ještě
-          jednou na email nebo na naší Facebook stránku.
+          jednou na email nebo na naši Facebook stránku.
         </p>
         <p>
           Přihlašování do soutěže končí{" "}
