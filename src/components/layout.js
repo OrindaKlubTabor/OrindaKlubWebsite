@@ -28,10 +28,10 @@ export default function Layout({ children }) {
         data-cf-beacon='{"token": "3a6090d2ab3b4599b9f7344540de87c7"}'
       ></script>
       <Helmet>
-        <title>Orinda Klub Tábor</title>
+        <title>Půlrok v USA plný zážitků na celý život - Orinda Klub</title>
         <meta
           name="description"
-          content="Každý rok pořádáme soutěž o studium v Kalifornii. Přidej se a pojeď do Orindy!"
+          content="Přihlaš se do soutěže 2022! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě."
         />
       </Helmet>
       <header className="navbar">

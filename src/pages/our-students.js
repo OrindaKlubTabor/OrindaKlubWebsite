@@ -46,7 +46,10 @@ export default () => {
   return (
     <Layout>
       <Container>
-        <Header headerText="Naši studenti"></Header>
+        <Header
+          headerText="Naši studenti"
+          description="Do Orindy jelo už přes 19 studentů a studentek z Tábora. Tady si můžeš přečíst o jejich zážitcích."
+        ></Header>
         <p>
           Každý kdo vyhraje v naší soutěži se automaticky stává členem našeho
           klubu a pomáhá nám ho rozvíjet nadále. Za celou dobu máme už přes 15

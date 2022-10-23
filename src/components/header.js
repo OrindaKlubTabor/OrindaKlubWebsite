@@ -6,6 +6,7 @@ export default function Header(props) {
     <div>
       <Helmet>
         <title>{props.headerText} - Orinda Klub Tábor</title>
+        <meta name="description" content={props.description} />
       </Helmet>
       <h1>{props.headerText}</h1>
     </div>
