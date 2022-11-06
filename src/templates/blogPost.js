@@ -12,7 +12,10 @@ const BlogPost = ({ data }) => {
         <Link className="link-important" to="/blog">
           &#8592; Zpět na všechny příspěvky
         </Link>
-        <h1>{data.contentfulPost.title}</h1>
+        <Header
+          headerText={data.contentfulPost.title}
+          description={data.contentfulPost.description}
+        ></Header>
         <p>{data.contentfulPost.createdAt}</p>
         {data.contentfulPost.thumbnail != null && (
           <div className="post-img-center">
@@ -57,6 +60,7 @@ export const pageQuery = graphql`
   query($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
+      description
       createdAt(formatString: "D. MMMM YYYY, HH:mm", locale: "cs")
       content {
         json

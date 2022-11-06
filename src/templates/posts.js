@@ -17,7 +17,10 @@ export default class BlogList extends React.Component {
     return (
       <Layout>
         <Container>
-          <h1>Všechny příspěvky</h1>
+          <Header
+            headerText="Všechny příspěvky"
+            description="Co se v Orinda Klubu děje přávě nového? Přečti si naše články a buď u toho."
+          ></Header>
           {posts.map(node => (
             <Link className="post-link" to={`/${node.slug}`}>
               <div
