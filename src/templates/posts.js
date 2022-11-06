@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Container from "../components/container"
+import Header from "../components/header"
 import { graphql, Link } from "gatsby"
 
 export default class BlogList extends React.Component {
