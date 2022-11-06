@@ -23,6 +23,14 @@ export default function faq() {
           Vše je velice individuální, záleží také na domluvě s hostitelskou
           rodinou.
         </p>
+        <h2>Co všechno student/ka dostane?</h2>
+        <p>
+          Výherci je hrazeno ubytování, jídlo i studium na střední škole.
+          Výherce si zaplatí jen náklady na vízum (cca do 10 tis. Kč) a letenku.
+          Letenku ale výherci proplatíme, tyto peníze využívá student/ka jako
+          své kapesné na pobyt v USA. Celková peněžní hodnota výhry se pohybuje
+          okolo 300 000 Kč.
+        </p>
         <h2>Jak se v případě výhry řeší studium v ČR?</h2>
         <p>
           Záleží na tom, z jaké školy student je. Někdo skládá komisionální
