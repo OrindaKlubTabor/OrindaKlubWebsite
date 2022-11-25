@@ -285,7 +285,7 @@ a:hover .profile-blue {
 }
 
 .profile img {
-  max-width: min(325px, 100%);
+  max-width: min(200px, 100%);
 }
 
 .profile {
