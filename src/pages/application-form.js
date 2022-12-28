@@ -9,13 +9,16 @@ export default function application() {
     <Layout>
       <Container>
         <Header headerText="Přihlášení do soutěže"></Header>
-        {/* <p>
-          Nemusíš se ale strachovat, na podzim 2022 spouštíme soutěž znovu.
+        <h2>Soutěž 2022 je ukončená</h2>
+        <p>
+          Nemusíš se ale strachovat, na podzim 2023 spouštíme soutěž znovu.
           Zatím si můžeš přečíst, co budeš k přihlášce potřebovat. Určitě si
           také přečti některý z předcházejících příspěkvů našich studentů z
           Kalifornie.
         </p>
-        <p>Zadej svůj email, aby Ti neunikl další ročník soutěže!</p>
+        <p>
+          Přidej se na náš mailing list, aby Ti neunikl další ročník soutěže!
+        </p>
         <Link
           style={{
             background: "#002868",
@@ -23,12 +26,12 @@ export default function application() {
             padding: "1rem",
             margin: "1rem 0 0",
             display: "block",
-            maxWidth: "20rem",
+            maxWidth: "25rem",
           }}
           to="https://forms.gle/ey149oGRc99eiSBb8"
         >
-          Odebírat novinky &#8594;
-        </Link> */}
+          Chci poslat email před začátkem další soutěže &#8594;
+        </Link>
         <h2>Obsah přihlášky</h2>
         <p>
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
@@ -38,6 +41,7 @@ export default function application() {
           přiložit alespoň jednu fotografii. Dej si na eseji záležet, má totiž v
           celém procesu rozhodování velkou váhu.
         </p>
+        {/* 
         <h2>Kam odeslat přihlášku?</h2>
         <p>
           Eseje odesílejte ve formátu PDF na{" "}
@@ -51,7 +55,7 @@ export default function application() {
         <p>
           Přihlašování do soutěže končí{" "}
           <strong>v neděli 18. prosince 2022 ve 23:59</strong>
-        </p>
+        </p> */}
       </Container>
     </Layout>
   )

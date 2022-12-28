@@ -31,7 +31,7 @@ export default function Layout({ children }) {
         <title>Půlrok v USA plný zážitků na celý život - Orinda Klub</title>
         <meta
           name="description"
-          content="Přihlaš se do soutěže 2022! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě."
+          content="Přihlaš se do soutěže 2023! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě."
         />
       </Helmet>
       <header className="navbar">
@@ -54,7 +54,7 @@ export default function Layout({ children }) {
       </header>
       {displayPopup && (
         <div className="popup">
-          Přihlašování do soutěže 2022 je ukončené!{" "}
+          Přihlašování do soutěže znovu spostíme na podzim 2023!{" "}
           {/*Přihlašování do
           soutěže skončí už{" "}
           {formatDistance(new Date("2022/12/19"), new Date(), {
