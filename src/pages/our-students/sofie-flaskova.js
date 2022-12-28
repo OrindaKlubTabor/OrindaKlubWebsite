@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../../components/layout"
 import Container from "../../components/container"
-import ProfilePic from "../../images/students/sofie-flaskova.png"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
