@@ -48,13 +48,14 @@ export default function Layout({ children }) {
             style={{ background: "#002868", color: "white", padding: "1rem" }}
             to="/application-form"
           >
-            Přihlásit se do soutěže
+            {/*Přihlásit se do soutěže*/}
+            Chci vědět o další soutěži
           </Link>
         </div>
       </header>
       {displayPopup && (
         <div className="popup">
-          Přihlašování do soutěže znovu spostíme na podzim 2023!{" "}
+          Přihlašování do soutěže znovu spustíme na podzim 2023!{" "}
           {/*Přihlašování do
           soutěže skončí už{" "}
           {formatDistance(new Date("2022/12/19"), new Date(), {
@@ -75,7 +76,7 @@ export default function Layout({ children }) {
             <div style={{ padding: "0 0 2rem 0" }}>
               <a href="mailto:orindaklub@gmail.com">orindaklub@gmail.com</a>
               <a href="https://facebook.com/OrindaKlub">Facebook</a>
-              <a href="https://www.instagram.com/sofieflaskovaa">Instagram</a>
+              <a href="https://www.instagram.com/orindaklubtabor">Instagram</a>
             </div>
             <div>
               &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}

@@ -30,7 +30,7 @@ export default function application() {
           }}
           to="https://forms.gle/ey149oGRc99eiSBb8"
         >
-          Chci poslat email před začátkem další soutěže &#8594;
+          Dejte mi vědět před začátkem další soutěže &#8594;
         </Link>
         <h2>Obsah přihlášky</h2>
         <p>
