@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet"
 export default () => (
   <Layout>
     <Helmet>
-        <title>Adam Kraus - Orinda Klub Tábor</title>
+      <title>Adam Kraus - Orinda Klub Tábor</title>
     </Helmet>
     <Container>
       <Link className="link-important" to="/our-students/">
