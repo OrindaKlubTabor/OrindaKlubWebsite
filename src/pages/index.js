@@ -95,7 +95,7 @@ export default function Home() {
           </Link>
           <h2 style={{ margin: "2rem 0 2rem" }}>Jak soutěž probíhá?</h2>
           <h3>První kolo</h3>
-          <h5 style={{ margin: "0" }}>4. října - 18. prosinec</h5>
+          <h5 style={{ margin: "0" }}>3. října - 17. prosinec</h5>
           <p>
             Každý rok na podzim začíná první kolo soutěže. V tomto kole máš za
             úkol napsat motivační esej v angličtině na přibližně 2 normostrany.

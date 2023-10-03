@@ -9,7 +9,7 @@ export default function application() {
     <Layout>
       <Container>
         <Header headerText="Přihlášení do soutěže"></Header>
-        <h2>Soutěž 2022 je ukončená</h2>
+        {/*<h2>Soutěž 2022 je ukončená</h2>
         <p>
           Nemusíš se ale strachovat, na podzim 2023 spouštíme soutěž znovu.
           Zatím si můžeš přečíst, co budeš k přihlášce potřebovat. Určitě si
@@ -31,7 +31,7 @@ export default function application() {
           to="https://forms.gle/ey149oGRc99eiSBb8"
         >
           Dejte mi vědět před začátkem další soutěže &#8594;
-        </Link>
+        </Link> */}
         <h2>Obsah přihlášky</h2>
         <p>
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
@@ -40,8 +40,7 @@ export default function application() {
           jsou tvoje očekávání od tohoto studijního pobytu. Doporučujeme ti
           přiložit alespoň jednu fotografii. Dej si na eseji záležet, má totiž v
           celém procesu rozhodování velkou váhu.
-        </p>
-        {/* 
+        </p> 
         <h2>Kam odeslat přihlášku?</h2>
         <p>
           Eseje odesílejte ve formátu PDF na{" "}
@@ -54,8 +53,8 @@ export default function application() {
         </p>
         <p>
           Přihlašování do soutěže končí{" "}
-          <strong>v neděli 18. prosince 2022 ve 23:59</strong>
-        </p> */}
+          <strong>v neděli 17. prosince 2023 ve 23:59</strong>
+        </p>
       </Container>
     </Layout>
   )

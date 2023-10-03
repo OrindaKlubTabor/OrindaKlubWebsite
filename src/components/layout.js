@@ -48,20 +48,19 @@ export default function Layout({ children }) {
             style={{ background: "#002868", color: "white", padding: "1rem" }}
             to="/application-form"
           >
-            {/*Přihlásit se do soutěže*/}
-            Chci vědět o další soutěži
+            Přihlásit se do soutěže
+            {/* Chci vědět o další soutěži */}
           </Link>
         </div>
       </header>
       {displayPopup && (
         <div className="popup">
-          Přihlašování do soutěže znovu spustíme na podzim 2023!{" "}
-          {/*Přihlašování do
-          soutěže skončí už{" "}
-          {formatDistance(new Date("2022/12/19"), new Date(), {
+          {/*Přihlašování do soutěže znovu spustíme na podzim 2023!{' '}*/}
+          Přihlašování do soutěže skončí už{" "}
+          {formatDistance(new Date("2023/12/18"), new Date(), {
             addSuffix: true,
             locale: cs,
-          })}*/}
+          })}
         </div>
       )}
       {children}
