@@ -59,6 +59,23 @@ export default function Home() {
       </div>
       <Container>
         <div id="content">
+          <div id="video">
+            <h2 style={{ margin: "4rem 0 1rem" }}>Přednáška o soutěži</h2>
+            <p>
+              Nahrávka přednášky o soutěži, která se konala v říjnu 2023 na
+              Gymnáziu Soběslav. Rádi poskytneme přednášku i na vaší škole,
+              neváhejte nás kontaktovat.
+            </p>
+            <iframe
+              width="690"
+              height="388"
+              src="https://www.youtube.com/embed/Na0WP4Yl2cw?si=UlfBwYwmzocCEJyM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
           <p>
             Získej možnost studovat půl roku na střední škole v Kalifornii.
             Bydlet budeš u hostitelské rodiny, která se o tebe postará a staneš
