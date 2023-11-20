@@ -7,8 +7,8 @@ import Img from "gatsby-image"
 
 export default () => {
   const data = useStaticQuery(graphql`
-    query SofieQ {
-      file(relativePath: { eq: "students/sofie-flaskova.png" }) {
+    query EliskaQ {
+      file(relativePath: { eq: "students/eliska-tumova.png" }) {
         childImageSharp {
           fixed(width: 200, quality: 90) {
             originalName
@@ -21,20 +21,20 @@ export default () => {
   return (
     <Layout>
       <Helmet>
-        <title>Sofie Flašková - Orinda Klub Tábor</title>
+        <title>Eliška Tůmová - Orinda Klub Tábor</title>
       </Helmet>
       <Container>
         <Link className="link-important" to="/our-students/">
           &#8592; zpět na všechny studenty
         </Link>
         <div className="profile">
-          <Img fixed={data.file.childImageSharp.fixed} alt="Sofie Flašková" />
-          <h1>Sofie Flašková</h1>
-          <small>Medailonek 2022/23</small>
+          <Img fixed={data.file.childImageSharp.fixed} alt="Eliška Tůmová" />
+          <h1>Eliška Tůmová</h1>
+          <small>Medailonek 2023/24</small>
           <br></br>
           <a
             className="link-important"
-            href="https://www.instagram.com/sofieflaskovaa/"
+            href="https://www.instagram.com/eliskatumovaa/"
           >
             Odkaz na Instagram →
           </a>
@@ -46,9 +46,9 @@ export default () => {
             Odkaz na YouTube kanál →
           </a> */}
           <p>
-            Sofie se vrátila z Orindy v lednu 2023. Její
+            Eliška je aktuálně v Orindě, vrací se v lednu 2024. Její
             dobrodružství můžete sledovat na Instagramu, kam
-            přidávala své dojmy z Kalifornie.
+            přidává své dojmy z Kalifornie.
           </p>
         </div>
       </Container>
