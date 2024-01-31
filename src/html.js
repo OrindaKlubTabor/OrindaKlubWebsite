@@ -25,6 +25,7 @@ export default function HTML(props) {
   gtag('js', new Date());
 
   gtag('config', 'G-D1XKJESN67');
+  gtag('config', 'AW-16450868697');
   `,
           }}
         />

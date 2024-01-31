@@ -7,6 +7,11 @@ import { Link } from "gatsby"
 export default function application() {
   return (
     <Layout>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `gtag('event', 'conversion', {'send_to': 'AW-16450868697/DqNlCLqZ0o0ZENmrsaQ9'});`,
+        }}
+      />
       <Container>
         <Header headerText="Přihlášení do soutěže"></Header>
         {/*<h2>Soutěž 2022 je ukončená</h2>
@@ -40,7 +45,7 @@ export default function application() {
           jsou tvoje očekávání od tohoto studijního pobytu. Doporučujeme ti
           přiložit alespoň jednu fotografii. Dej si na eseji záležet, má totiž v
           celém procesu rozhodování velkou váhu.
-        </p> 
+        </p>
         <h2>Kam odeslat přihlášku?</h2>
         <p>
           Eseje odesílejte ve formátu PDF na{" "}
