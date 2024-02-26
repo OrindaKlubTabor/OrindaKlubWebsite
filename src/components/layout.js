@@ -48,13 +48,14 @@ export default function Layout({ children }) {
             style={{ background: "#002868", color: "white", padding: "1rem" }}
             to="/application-form"
           >
-            Přihlásit se do soutěže
-            {/* Chci vědět o další soutěži */}
+            {/* Přihlásit se do soutěže */}
+            Chci vědět o další soutěži
           </Link>
         </div>
       </header>
         <div className="popup">
-          {new Date() < applicationDeadline ? (
+          Další ročník soutěže spouštíme na podzim 2024. Zatím se přidej na náš mailing list, dáme vědět, až bude soutěž spuštěna!
+          {/* {new Date() < applicationDeadline ? (
             "Přihlašování do soutěže skončí už " + 
             formatDistance(applicationDeadline, new Date(), {
               addSuffix: true,
@@ -64,7 +65,7 @@ export default function Layout({ children }) {
           ) : (
             "Přihlašování do soutěže je ukončeno! Děkujeme všem za účast."
           )
-          }
+          } */}
         </div>
       {children}
       <footer>

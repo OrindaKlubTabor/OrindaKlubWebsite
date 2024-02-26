@@ -14,9 +14,9 @@ export default function application() {
       />
       <Container>
         <Header headerText="Přihlášení do soutěže"></Header>
-        {/*<h2>Soutěž 2022 je ukončená</h2>
+        <h2>Soutěž 2022 je ukončená</h2>
         <p>
-          Nemusíš se ale strachovat, na podzim 2023 spouštíme soutěž znovu.
+          Nemusíš se ale strachovat, na podzim 2024 spouštíme soutěž znovu.
           Zatím si můžeš přečíst, co budeš k přihlášce potřebovat. Určitě si
           také přečti některý z předcházejících příspěkvů našich studentů z
           Kalifornie.
@@ -31,13 +31,14 @@ export default function application() {
             padding: "1rem",
             margin: "1rem 0 0",
             display: "block",
-            maxWidth: "25rem",
+            maxWidth: "20rem",
           }}
-          to="https://forms.gle/ey149oGRc99eiSBb8"
+          to="https://forms.gle/2UtcZtYhXZrDQg5c6"
+          target="_blank"
         >
-          Dejte mi vědět před začátkem další soutěže &#8594;
-        </Link> */}
-        <h2>Obsah přihlášky</h2>
+          Přidej se na náš mailing list &#8594;
+        </Link>
+        {/* <h2>Obsah přihlášky</h2>
         <p>
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
           měla obsahovat představení tebe, tvojí rodiny a koníčků. Taky
@@ -59,7 +60,7 @@ export default function application() {
         <p>
           Přihlašování do soutěže končí{" "}
           <strong>v neděli 17. prosince 2023 ve 23:59</strong>
-        </p>
+        </p> */}
       </Container>
     </Layout>
   )
