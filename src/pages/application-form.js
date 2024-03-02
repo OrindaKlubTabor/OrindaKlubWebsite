@@ -14,7 +14,7 @@ export default function application() {
       />
       <Container>
         <Header headerText="Přihlášení do soutěže"></Header>
-        <h2>Soutěž 2022 je ukončená</h2>
+        <h2>Soutěž 2023 je ukončená</h2>
         <p>
           Nemusíš se ale strachovat, na podzim 2024 spouštíme soutěž znovu.
           Zatím si můžeš přečíst, co budeš k přihlášce potřebovat. Určitě si
