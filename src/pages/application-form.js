@@ -2,7 +2,8 @@ import React from "react"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Container from "../components/container"
-import { Link } from "gatsby"
+import { DEADLINE } from "../constants"
+// import { Link } from "gatsby"
 
 export default function application() {
   return (
@@ -14,7 +15,7 @@ export default function application() {
       />
       <Container>
         <Header headerText="Přihlášení do soutěže"></Header>
-        <h2>Soutěž 2023 je ukončená</h2>
+        {/* <h2>Soutěž 2023 je ukončená</h2>
         <p>
           Nemusíš se ale strachovat, na podzim 2024 spouštíme soutěž znovu.
           Zatím si můžeš přečíst, co budeš k přihlášce potřebovat. Určitě si
@@ -37,8 +38,8 @@ export default function application() {
           target="_blank"
         >
           Přidej se na náš mailing list &#8594;
-        </Link>
-        {/* <h2>Obsah přihlášky</h2>
+        </Link> */}
+        <h2>Obsah přihlášky</h2>
         <p>
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
           měla obsahovat představení tebe, tvojí rodiny a koníčků. Taky
@@ -50,7 +51,7 @@ export default function application() {
         <h2>Kam odeslat přihlášku?</h2>
         <p>
           Eseje odesílejte ve formátu PDF na{" "}
-          <strong>orindaklub@gmail.com</strong>
+          <strong>apply@orindaklub.cz</strong>
         </p>
         <p>
           Po přijetí emailu ti dáme vždy vědět, že jsme přihlášku přijali.
@@ -58,9 +59,15 @@ export default function application() {
           jednou na email nebo na naši Facebook stránku.
         </p>
         <p>
-          Přihlašování do soutěže končí{" "}
-          <strong>v neděli 17. prosince 2023 ve 23:59</strong>
-        </p> */}
+          Deadline na odeslání eseje:{" "}
+          <strong>{new Intl.DateTimeFormat('cs-CZ', {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            hour: 'numeric',
+            minute: 'numeric',
+          }).format(DEADLINE)}</strong>
+        </p>
       </Container>
     </Layout>
   )

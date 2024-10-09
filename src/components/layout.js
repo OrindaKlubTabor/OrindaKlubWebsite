@@ -4,13 +4,11 @@ import TaborLogo from "../images/tabor-logo.png"
 import OrindaLogo from "../images/orinda-logo.png"
 import Hamburger from "hamburger-react"
 import { useState } from "react"
-import { formatDistance } from "date-fns"
-import { cs } from "date-fns/locale"
 import { Helmet } from "react-helmet"
+import Popup from "./deadline-popup"
 
 export default function Layout({ children }) {
   const [isOpen, setOpen] = useState(false)
-  const applicationDeadline = new Date("2023-12-18T00:00:00")
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -31,7 +29,7 @@ export default function Layout({ children }) {
         <title>Půlrok v USA plný zážitků na celý život - Orinda Klub</title>
         <meta
           name="description"
-          content="Přihlaš se do soutěže 2023! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě."
+          content="Přihlaš se do soutěže 2024! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě."
         />
       </Helmet>
       <header className="navbar">
@@ -48,25 +46,12 @@ export default function Layout({ children }) {
             style={{ background: "#002868", color: "white", padding: "1rem" }}
             to="/application-form"
           >
-            {/* Přihlásit se do soutěže */}
-            Chci vědět o další soutěži
+            Přihlásit se do soutěže
+            {/* Chci vědět o další soutěži */}
           </Link>
         </div>
       </header>
-        <div className="popup">
-          Další ročník soutěže spouštíme na podzim 2024. Zatím se přidej na náš mailing list, dáme vědět, až bude soutěž spuštěna!
-          {/* {new Date() < applicationDeadline ? (
-            "Přihlašování do soutěže skončí už " + 
-            formatDistance(applicationDeadline, new Date(), {
-              addSuffix: true,
-              locale: cs,
-            })
-            + "!"
-          ) : (
-            "Přihlašování do soutěže je ukončeno! Děkujeme všem za účast."
-          )
-          } */}
-        </div>
+      <Popup />
       {children}
       <footer>
         <div className="width-limiter">
@@ -77,7 +62,7 @@ export default function Layout({ children }) {
           </div>
           <div>
             <div style={{ padding: "0 0 2rem 0" }}>
-              <a href="mailto:orindaklub@gmail.com">orindaklub@gmail.com</a>
+              <a href="mailto:info@orindaklub.cz">info@orindaklub.cz</a>
               <a href="https://facebook.com/OrindaKlub">Facebook</a>
               <a href="https://www.instagram.com/orindaklubtabor">Instagram</a>
             </div>
