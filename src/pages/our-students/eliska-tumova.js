@@ -39,16 +39,10 @@ export default () => {
             Odkaz na Instagram →
           </a>
           <br></br>
-          {/* <a
-            className="link-important"
-            href="https://www.youtube.com/channel/UCxXUMHrP8OBpI-FSj27GAqw"
-          >
-            Odkaz na YouTube kanál →
-          </a> */}
           <p>
-            Eliška je aktuálně v Orindě, vrací se v lednu 2024. Její
+            Eliška se vrátila z Orindy v lednu 2024. Její
             dobrodružství můžete sledovat na Instagramu, kam
-            přidává své dojmy z Kalifornie.
+            přidávala své dojmy z Kalifornie.
           </p>
         </div>
       </Container>
