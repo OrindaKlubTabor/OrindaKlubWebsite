@@ -58,6 +58,12 @@ export default () => {
       </Container>
       <div className="student-grid">
       <Student
+          name="Jan Belada"
+          year="2024/2025"
+          page="jan-belada"
+          pictures={pictures}
+        ></Student>
+      <Student
           name="Eliška Tůmová"
           year="2023/2024"
           page="eliska-tumova"
