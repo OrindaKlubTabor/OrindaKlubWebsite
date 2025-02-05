@@ -123,7 +123,7 @@ export default function Home() {
           <h3 style={{ margin: "2rem 0 1rem" }}>Druhé kolo</h3>
           <h5 style={{ margin: "0" }}>únor/březen</h5>
           <p>
-            Pokud bude tvoje esej vyhovovat zadání, pozveme tě do druhého kola.
+            Pokud nás svojí esejí zaujmeš, pozveme tě do druhého kola.
             Bude tě čekat ústní pohovor v angličtině, kde se budeme ptát na
             doplňující informace k eseji. Chceme tě tím více poznat, s komisí
             budeš mluvit asi 20 minut.
