@@ -36,19 +36,17 @@ function Student(props) {
 }
 
 const OurStudentsPage = () => {
-  const pictures = useStaticQuery(
-    graphql`
-      query ProfileImages {
-        allFile(filter: { dir: { regex: "/images/students/" } }) {
-          nodes {
-            childImageSharp {
-              gatsbyImageData(width: 150, quality: 80, placeholder: BLURRED)
-            }
+  const pictures = useStaticQuery(graphql`
+    query ProfileImages {
+      allFile(filter: { dir: { regex: "/images/students/" } }) {
+        nodes {
+          childImageSharp {
+            gatsbyImageData(width: 150, quality: 80, placeholder: BLURRED)
           }
         }
       }
-    `
-  )
+    }
+  `)
   return (
     <Layout>
       <Container>

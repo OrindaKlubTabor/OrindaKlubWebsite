@@ -1,6 +1,6 @@
 import React from "react"
 import { formatDistance } from "date-fns"
-import { cs } from "date-fns/locale"
+import cs from "date-fns/locale/cs"
 import { DEADLINE } from "../constants"
 
 const Popup = () => {

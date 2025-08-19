@@ -52,7 +52,7 @@ const BlogPost = ({ data }) => {
 }
 export default BlogPost
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     contentfulPost(slug: { eq: $slug }) {
       title
       description

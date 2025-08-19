@@ -8,6 +8,10 @@ module.exports = {
   siteMetadata: {
     title: "Orinda Klub Tábor",
   },
+  // Gatsby v5 defaults trailingSlash to "always". Make it explicit to avoid surprises.
+  trailingSlash: "always",
+  // Optionally enable GraphQL type generation files
+  graphqlTypegen: true,
 
   plugins: [
     "gatsby-plugin-image",

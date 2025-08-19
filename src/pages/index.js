@@ -7,23 +7,18 @@ import { StaticImage } from "gatsby-plugin-image"
 import { DEADLINE } from "../constants"
 
 export default function Home() {
-  const data = useStaticQuery(
-    graphql`
-      query BackgroundImgPostsOnly {
-        posts: allContentfulPost(
-          limit: 1
-          sort: { fields: createdAt, order: DESC }
-        ) {
-          nodes {
-            createdAt(formatString: "D. MMMM YYYY", locale: "cs")
-            title
-            slug
-            description
-          }
+  const data = useStaticQuery(graphql`
+    query BackgroundImgPostsOnly {
+      posts: allContentfulPost(limit: 1, sort: { createdAt: DESC }) {
+        nodes {
+          createdAt(formatString: "D. MMMM YYYY", locale: "cs")
+          title
+          slug
+          description
         }
       }
-    `
-  )
+    }
+  `)
   return (
     <Layout>
       <div className="landing-image">

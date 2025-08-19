@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Gatsby v5 deps",
+			"type": "shell",
+			"command": "npm install --legacy-peer-deps",
+			"group": "build"
+		},
+		{
+			"label": "Gatsby build v5",
+			"type": "shell",
+			"command": "npm run build",
+			"group": "build"
+		},
+		{
+			"label": "Install latest deps",
+			"type": "shell",
+			"command": "npm install --legacy-peer-deps",
+			"group": "build"
+		},
+		{
+			"label": "Gatsby build after updates",
+			"type": "shell",
+			"command": "npm run build",
+			"group": "build"
+		},
+		{
+			"label": "Run Prettier format",
+			"type": "shell",
+			"command": "npm run format",
+			"group": "build"
+		},
+		{
+			"label": "Prune removed devDeps",
+			"type": "shell",
+			"command": "npm uninstall patch-package",
+			"group": "build"
+		}
+	]
+}

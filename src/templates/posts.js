@@ -108,11 +108,7 @@ export default class BlogList extends React.Component {
 
 export const data = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allContentfulPost(
-      limit: $limit
-      skip: $skip
-      sort: { fields: createdAt, order: DESC }
-    ) {
+    allContentfulPost(limit: $limit, skip: $skip, sort: { createdAt: DESC }) {
       nodes {
         description
         createdAt(formatString: "D. MMMM YYYY", locale: "cs")
