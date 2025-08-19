@@ -1,3 +1,6 @@
+const { EventEmitter } = require("events")
+EventEmitter.defaultMaxListeners = 50
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -7,6 +10,7 @@ module.exports = {
   },
 
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

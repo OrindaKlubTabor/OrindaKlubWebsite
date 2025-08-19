@@ -44,40 +44,25 @@ export default function application() {
           Motivační esej v anglickém jazyce v rozsahu přibližně 2 normostrany by
           měla obsahovat představení tebe, tvojí rodiny a koníčků. Taky
           nezapomeň připsat důvody, proč chceš studovat na škole v USA, a jaká
-          jsou tvoje očekávání od tohoto studijního pobytu.
-          Dej si na eseji záležet, má totiž v celém procesu rozhodování velkou váhu.
+          jsou tvoje očekávání od tohoto studijního pobytu. Dej si na eseji
+          záležet, má totiž v celém procesu rozhodování velkou váhu.
         </p>
         <h2>Formátování</h2>
         <p>
           Nepřikládej prosím žádné fotografie ani do PDF, ani do přílohy.
           <h3>Nadpisy</h3>
           <ul>
-            <li>
-              14pt (pro titulní můžeš použít 28pt)
-            </li>
-            <li>
-              tučné
-            </li>
-            <li>
-              1.5 mezera
-            </li>
-            <li>
-              Times New Roman
-            </li>
+            <li>14pt (pro titulní můžeš použít 28pt)</li>
+            <li>tučné</li>
+            <li>1.5 mezera</li>
+            <li>Times New Roman</li>
           </ul>
           <h3>Odstavce</h3>
           <ul>
-            <li>
-              12pt
-            </li>
-            <li>
-              1.5 mezera
-            </li>
-            <li>
-              Times New Roman
-            </li>
+            <li>12pt</li>
+            <li>1.5 mezera</li>
+            <li>Times New Roman</li>
           </ul>
-
         </p>
         <h2>Kam odeslat přihlášku?</h2>
         <p>
@@ -91,13 +76,15 @@ export default function application() {
         </p>
         <p>
           Deadline na odeslání eseje:{" "}
-          <strong>{new Intl.DateTimeFormat('cs-CZ', {
-            weekday: 'long',
-            day: 'numeric',
-            month: 'long',
-            hour: 'numeric',
-            minute: 'numeric',
-          }).format(DEADLINE)}</strong>
+          <strong>
+            {new Intl.DateTimeFormat("cs-CZ", {
+              weekday: "long",
+              day: "numeric",
+              month: "long",
+              hour: "numeric",
+              minute: "numeric",
+            }).format(DEADLINE)}
+          </strong>
         </p>
       </Container>
     </Layout>

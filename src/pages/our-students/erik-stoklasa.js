@@ -3,17 +3,14 @@ import Layout from "../../components/layout"
 import Container from "../../components/container"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default () => {
+const ErikStoklasaPage = () => {
   const data = useStaticQuery(graphql`
     query ErikQ {
       file(relativePath: { eq: "students/erik-stoklasa.png" }) {
         childImageSharp {
-          fixed(width: 200, quality: 90) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
+          gatsbyImageData(width: 200, quality: 90)
         }
       }
     }
@@ -28,7 +25,7 @@ export default () => {
           &#8592; zpět na všechny studenty
         </Link>
         <div className="profile">
-          <Img fixed={data.file.childImageSharp.fixed} alt="Erik Stoklasa" />
+          <GatsbyImage image={getImage(data.file)} alt="Erik Stoklasa" />
           <h1>Erik Stoklasa</h1>
           <small>Medailonek 2019/20</small>
           <br></br>
@@ -97,3 +94,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default ErikStoklasaPage

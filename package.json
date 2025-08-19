@@ -4,6 +4,9 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "0BSD",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -18,19 +21,19 @@
     "@contentful/rich-text-types": "^14.1.1",
     "date-fns": "^2.21.3",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.24.80",
-    "gatsby-image": "^2.4.21",
-    "gatsby-plugin-sharp": "^2.6.43",
-    "gatsby-source-contentful": "^3.0.6",
-    "gatsby-source-filesystem": "^2.3.37",
-    "gatsby-transformer-sharp": "^2.5.20",
+    "gatsby": "^3.0.0",
+    "gatsby-plugin-image": "^1.0.0",
+    "gatsby-plugin-sharp": "^3.0.0",
+    "gatsby-source-contentful": "^5.0.0",
+    "gatsby-source-filesystem": "^3.0.0",
+    "gatsby-transformer-sharp": "^3.0.0",
     "hamburger-react": "^2.4.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.1.2"
+    "prettier": "^2.1.2"
   },
   "repository": {
     "type": "git",
@@ -38,5 +41,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "overrides": {
+    "source-map": "0.7.4"
   }
 }

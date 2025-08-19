@@ -3,17 +3,14 @@ import Layout from "../../components/layout"
 import Container from "../../components/container"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default () => {
+const SofieFlaskovaPage = () => {
   const data = useStaticQuery(graphql`
     query SofieQ {
       file(relativePath: { eq: "students/sofie-flaskova.png" }) {
         childImageSharp {
-          fixed(width: 200, quality: 90) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
+          gatsbyImageData(width: 200, quality: 90)
         }
       }
     }
@@ -28,7 +25,7 @@ export default () => {
           &#8592; zpět na všechny studenty
         </Link>
         <div className="profile">
-          <Img fixed={data.file.childImageSharp.fixed} alt="Sofie Flašková" />
+          <GatsbyImage image={getImage(data.file)} alt="Sofie Flašková" />
           <h1>Sofie Flašková</h1>
           <small>Medailonek 2022/23</small>
           <br></br>
@@ -46,12 +43,13 @@ export default () => {
             Odkaz na YouTube kanál →
           </a> */}
           <p>
-            Sofie se vrátila z Orindy v lednu 2023. Její
-            dobrodružství můžete sledovat na Instagramu, kam
-            přidávala své dojmy z Kalifornie.
+            Sofie se vrátila z Orindy v lednu 2023. Její dobrodružství můžete
+            sledovat na Instagramu, kam přidávala své dojmy z Kalifornie.
           </p>
         </div>
       </Container>
     </Layout>
   )
 }
+
+export default SofieFlaskovaPage

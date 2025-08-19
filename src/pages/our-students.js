@@ -4,19 +4,28 @@ import Container from "../components/container"
 import Header from "../components/header"
 
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 function Student(props) {
-  const profilePicture = props.pictures.allFile.nodes.find(
-    n => n.childImageSharp.fixed.originalName === props.page + ".png"
-  ).childImageSharp.fixed
+  const node = props.pictures.allFile.nodes.find(
+    n =>
+      n.childImageSharp.gatsbyImageData.images.fallback?.src?.includes(
+        `${props.page}.png`
+      ) ||
+      n.childImageSharp.gatsbyImageData.images.sources?.some(s =>
+        s.srcSet?.includes(`${props.page}.png`)
+      )
+  )
+  const profilePicture = getImage(node)
   return (
     <Link to={"/our-students/" + props.page + "/"}>
       <div
         className="profile profile-blue"
         style={{ backgroundColor: "#002868", color: "white" }}
       >
-        <Img fixed={profilePicture} alt={props.name} />
+        {profilePicture && (
+          <GatsbyImage image={profilePicture} alt={props.name} />
+        )}
         <h2 style={{ margin: "1rem 0 0.5rem", textAlign: "center" }}>
           {props.name}
         </h2>
@@ -26,17 +35,14 @@ function Student(props) {
   )
 }
 
-export default () => {
+const OurStudentsPage = () => {
   const pictures = useStaticQuery(
     graphql`
       query ProfileImages {
         allFile(filter: { dir: { regex: "/images/students/" } }) {
           nodes {
             childImageSharp {
-              fixed(width: 150, quality: 80) {
-                originalName
-                ...GatsbyImageSharpFixed_withWebp_noBase64
-              }
+              gatsbyImageData(width: 150, quality: 80, placeholder: BLURRED)
             }
           }
         }
@@ -57,13 +63,13 @@ export default () => {
         </p>
       </Container>
       <div className="student-grid">
-      <Student
+        <Student
           name="Jan Belada"
           year="2024/2025"
           page="jan-belada"
           pictures={pictures}
         ></Student>
-      <Student
+        <Student
           name="Eliška Tůmová"
           year="2023/2024"
           page="eliska-tumova"
@@ -158,3 +164,4 @@ export default () => {
     </Layout>
   )
 }
+export default OurStudentsPage

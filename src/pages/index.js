@@ -3,20 +3,13 @@ import Layout from "../components/layout"
 import Container from "../components/container"
 import DownArrow from "../images/down-arrow.png"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { DEADLINE } from "../constants"
 
 export default function Home() {
   const data = useStaticQuery(
     graphql`
-      query BackgroundImg {
-        image: file(relativePath: { eq: "background.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 1500) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
+      query BackgroundImgPostsOnly {
         posts: allContentfulPost(
           limit: 1
           sort: { fields: createdAt, order: DESC }
@@ -34,10 +27,12 @@ export default function Home() {
   return (
     <Layout>
       <div className="landing-image">
-        <Img
-          critical={true}
-          fadeIn={false}
-          fluid={data.image.childImageSharp.fluid}
+        <StaticImage
+          src="../images/background.png"
+          alt=""
+          layout="fullWidth"
+          loading="eager"
+          placeholder="none"
         />
       </div>
 
@@ -66,15 +61,24 @@ export default function Home() {
             Gymnáziu Soběslav. Rádi poskytneme přednášku i na vaší škole,
             neváhejte nás kontaktovat.
           </p>
-          <div id="video" style={{ paddingBottom: "56.25%", position: "relative" }}>
+          <div
+            id="video"
+            style={{ paddingBottom: "56.25%", position: "relative" }}
+          >
             <iframe
               src="https://www.youtube.com/embed/Na0WP4Yl2cw?si=UlfBwYwmzocCEJyM"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen="true"
-              style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}>
-            </iframe>
+              style={{
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+              }}
+            ></iframe>
           </div>
           <p>
             Získej možnost studovat půl roku na střední škole v Kalifornii.
@@ -112,10 +116,13 @@ export default function Home() {
           </Link>
           <h2 style={{ margin: "2rem 0 2rem" }}>Jak soutěž probíhá?</h2>
           <h3>První kolo</h3>
-          <h5 style={{ margin: "0" }}>1. října - {new Intl.DateTimeFormat('cs-CZ', {
-            day: 'numeric',
-            month: 'long',
-          }).format(DEADLINE)}</h5>
+          <h5 style={{ margin: "0" }}>
+            1. října -{" "}
+            {new Intl.DateTimeFormat("cs-CZ", {
+              day: "numeric",
+              month: "long",
+            }).format(DEADLINE)}
+          </h5>
           <p>
             Každý rok na podzim začíná první kolo soutěže. V tomto kole máš za
             úkol napsat motivační esej v angličtině na přibližně 2 normostrany.
@@ -123,10 +130,10 @@ export default function Home() {
           <h3 style={{ margin: "2rem 0 1rem" }}>Druhé kolo</h3>
           <h5 style={{ margin: "0" }}>únor/březen</h5>
           <p>
-            Pokud nás svojí esejí zaujmeš, pozveme tě do druhého kola.
-            Bude tě čekat ústní pohovor v angličtině, kde se budeme ptát na
-            doplňující informace k eseji. Chceme tě tím více poznat, s komisí
-            budeš mluvit asi 20 minut.
+            Pokud nás svojí esejí zaujmeš, pozveme tě do druhého kola. Bude tě
+            čekat ústní pohovor v angličtině, kde se budeme ptát na doplňující
+            informace k eseji. Chceme tě tím více poznat, s komisí budeš mluvit
+            asi 20 minut.
           </p>
           <h3 style={{ margin: "2rem 0 1rem" }}>Odlet do Orindy</h3>
           <h5 style={{ margin: "0" }}>srpen</h5>

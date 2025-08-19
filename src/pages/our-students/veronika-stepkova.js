@@ -5,7 +5,7 @@ import ProfilePic from "../../images/students/veronika-stepkova.png"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
-export default () => (
+const VeronikaStepkovaPage = () => (
   <Layout>
     <Helmet>
       <title>Veronika Štěpková - Orinda Klub Tábor</title>
@@ -63,3 +63,5 @@ export default () => (
     </Container>
   </Layout>
 )
+
+export default VeronikaStepkovaPage

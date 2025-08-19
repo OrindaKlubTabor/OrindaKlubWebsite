@@ -3,17 +3,14 @@ import Layout from "../../components/layout"
 import Container from "../../components/container"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default () => {
+const JanBeladaPage = () => {
   const data = useStaticQuery(graphql`
     query JanQ {
       file(relativePath: { eq: "students/jan-belada.png" }) {
         childImageSharp {
-          fixed(width: 200, quality: 90) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
+          gatsbyImageData(width: 200, quality: 90)
         }
       }
     }
@@ -28,7 +25,7 @@ export default () => {
           &#8592; zpět na všechny studenty
         </Link>
         <div className="profile">
-          <Img fixed={data.file.childImageSharp.fixed} alt="Jan Belada" />
+          <GatsbyImage image={getImage(data.file)} alt="Jan Belada" />
           <h1>Jan Belada</h1>
           <small>Medailonek 2024/25</small>
           <br></br>
@@ -40,12 +37,13 @@ export default () => {
           </a>
           <br></br>
           <p>
-            Jan je aktuálně v Orindě. Jeho
-            dobrodružství můžete sledovat na Instagramu, kam
-            přidává své dojmy z Kalifornie.
+            Jan je aktuálně v Orindě. Jeho dobrodružství můžete sledovat na
+            Instagramu, kam přidává své dojmy z Kalifornie.
           </p>
         </div>
       </Container>
     </Layout>
   )
 }
+
+export default JanBeladaPage

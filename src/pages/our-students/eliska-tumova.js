@@ -3,17 +3,14 @@ import Layout from "../../components/layout"
 import Container from "../../components/container"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default () => {
+const EliskaTumovaPage = () => {
   const data = useStaticQuery(graphql`
     query EliskaQ {
       file(relativePath: { eq: "students/eliska-tumova.png" }) {
         childImageSharp {
-          fixed(width: 200, quality: 90) {
-            originalName
-            ...GatsbyImageSharpFixed_withWebp_noBase64
-          }
+          gatsbyImageData(width: 200, quality: 90)
         }
       }
     }
@@ -28,7 +25,7 @@ export default () => {
           &#8592; zpět na všechny studenty
         </Link>
         <div className="profile">
-          <Img fixed={data.file.childImageSharp.fixed} alt="Eliška Tůmová" />
+          <GatsbyImage image={getImage(data.file)} alt="Eliška Tůmová" />
           <h1>Eliška Tůmová</h1>
           <small>Medailonek 2023/24</small>
           <br></br>
@@ -40,12 +37,13 @@ export default () => {
           </a>
           <br></br>
           <p>
-            Eliška se vrátila z Orindy v lednu 2024. Její
-            dobrodružství můžete sledovat na Instagramu, kam
-            přidávala své dojmy z Kalifornie.
+            Eliška se vrátila z Orindy v lednu 2024. Její dobrodružství můžete
+            sledovat na Instagramu, kam přidávala své dojmy z Kalifornie.
           </p>
         </div>
       </Container>
     </Layout>
   )
 }
+
+export default EliskaTumovaPage

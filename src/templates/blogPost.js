@@ -20,34 +20,28 @@ const BlogPost = ({ data }) => {
         <p>{data.contentfulPost.createdAt}</p>
         {data.contentfulPost.thumbnail != null && (
           <div className="post-img-center">
-            <picture>
-              <source
-                srcset={data.contentfulPost.thumbnail.fixed.srcSetWebp}
-                type="image/webp"
-              />
-              <source
-                srcset={data.contentfulPost.thumbnail.fixed.srcSet}
-                type="image/jpeg"
-              />
-              <img
-                src={data.contentfulPost.thumbnail.fixed.src}
-                alt={data.contentfulPost.title}
-              />
-            </picture>
+            <img
+              src={data.contentfulPost.thumbnail.file.url}
+              alt={data.contentfulPost.title}
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
           </div>
         )}
         <div style={{ marginTop: "3rem" }}>
-          {documentToReactComponents(data.contentfulPost.content.json, {
-            renderNode: {
-              [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
-                <img
-                  style={{ maxWidth: "100%" }}
-                  src={node.data.target.fields.file["en-US"].url}
-                  alt={node.data.target.fields.title["en-US"]}
-                />
-              ),
-            },
-          })}
+          {documentToReactComponents(
+            JSON.parse(data.contentfulPost.content.raw),
+            {
+              renderNode: {
+                [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
+                  <img
+                    style={{ maxWidth: "100%" }}
+                    src={node?.data?.target?.fields?.file?.["en-US"]?.url}
+                    alt={node?.data?.target?.fields?.title?.["en-US"]}
+                  />
+                ),
+              },
+            }
+          )}
           <Link className="link-important" to="/blog">
             &#8592; Zpět na všechny příspěvky
           </Link>
@@ -64,13 +58,11 @@ export const pageQuery = graphql`
       description
       createdAt(formatString: "D. MMMM YYYY, HH:mm", locale: "cs")
       content {
-        json
+        raw
       }
       thumbnail {
-        fixed(quality: 90, width: 500) {
-          src
-          srcSet
-          srcSetWebp
+        file {
+          url
         }
       }
     }

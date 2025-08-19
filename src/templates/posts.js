@@ -44,17 +44,11 @@ export default class BlogList extends React.Component {
                   </div>
 
                   {node.thumbnail != null && (
-                    <picture>
-                      <source
-                        srcset={node.thumbnail.fixed.srcSetWebp}
-                        type="image/webp"
-                      />
-                      <source
-                        srcset={node.thumbnail.fixed.srcSet}
-                        type="image/jpeg"
-                      />
-                      <img src={node.thumbnail.fixed.src} alt={node.title} />
-                    </picture>
+                    <img
+                      src={node.thumbnail.file.url}
+                      alt={node.title}
+                      style={{ maxWidth: 200, height: "auto" }}
+                    />
                   )}
                 </div>
               </div>
@@ -125,10 +119,8 @@ export const data = graphql`
         slug
         title
         thumbnail {
-          fixed(quality: 75, width: 200) {
-            src
-            srcSet
-            srcSetWebp
+          file {
+            url
           }
         }
       }

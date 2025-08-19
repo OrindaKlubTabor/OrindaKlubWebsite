@@ -2,25 +2,9 @@ import React from "react"
 import Header from "../components/header"
 import Layout from "../components/layout"
 import Container from "../components/container"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function About() {
-  const data = useStaticQuery(graphql`
-    query {
-      allImageSharp {
-        nodes {
-          fluid(maxWidth: 1000) {
-            originalName
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
-        }
-      }
-    }
-  `)
-  const orindaMap = data.allImageSharp.nodes.find(
-    n => n.fluid.originalName === "orinda-map.png"
-  ).fluid
   return (
     <Layout>
       <Container>
@@ -68,7 +52,13 @@ export default function About() {
           i lékařské stáže. Na rozvoji vztahů partnerských měst se podílejí i
           Rotary klub a Lions klub.
         </p>
-        <Img fluid={orindaMap} alt="Město Orinda" />
+        <StaticImage
+          src="../images/orinda-map.png"
+          alt="Město Orinda"
+          placeholder="blurred"
+          layout="constrained"
+          width={1000}
+        />
         <p>
           Americká Orinda je naším nejvzdálenějším partnerským městem. Toto
           městečko se svými cca 17 000 obyvateli leží ve státě California těsně
