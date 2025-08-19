@@ -52,7 +52,7 @@ const OurStudentsPage = () => {
       <Container>
         <Header
           headerText="Naši studenti"
-          description="Do Orindy jelo už přes 19 studentů a studentek z Tábora. Tady si můžeš přečíst o jejich zážitcích."
+          description="Do Orindy jelo už přes 20 studentů a studentek z Tábora. Tady si můžeš přečíst o jejich zážitcích."
         ></Header>
         <p>
           Každý kdo vyhraje v naší soutěži se automaticky stává členem našeho
@@ -61,6 +61,12 @@ const OurStudentsPage = () => {
         </p>
       </Container>
       <div className="student-grid">
+        {/* <Student
+          name="Amálie Zahradníčková"
+          year="2025/2026"
+          page="amalie-zahradnickova"
+          pictures={pictures}
+        ></Student> */}
         <Student
           name="Jan Belada"
           year="2024/2025"

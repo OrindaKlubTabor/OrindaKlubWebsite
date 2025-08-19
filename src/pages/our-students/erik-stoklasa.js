@@ -10,7 +10,7 @@ const ErikStoklasaPage = () => {
     query ErikQ {
       file(relativePath: { eq: "students/erik-stoklasa.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 200, quality: 90)
+          gatsbyImageData(width: 200, quality: 90, placeholder: BLURRED)
         }
       }
     }
@@ -29,7 +29,12 @@ const ErikStoklasaPage = () => {
           <h1>Erik Stoklasa</h1>
           <small>Medailonek 2019/20</small>
           <br></br>
-          <a className="link-important" href="https://blog.erikstoklasa.cz">
+          <a
+            className="link-important"
+            href="https://blog.erikstoklasa.cz"
+            target="_blank"
+            rel="noreferrer"
+          >
             Odkaz na Erikův blog →
           </a>
           <h2>Questionnaire</h2>

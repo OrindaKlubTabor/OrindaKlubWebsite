@@ -10,7 +10,7 @@ const DenisaDvorakovaPage = () => {
     query DenisaQ {
       file(relativePath: { eq: "students/denisa-dvorakova.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 200, quality: 90)
+          gatsbyImageData(width: 200, quality: 90, placeholder: BLURRED)
         }
       }
     }
@@ -32,6 +32,8 @@ const DenisaDvorakovaPage = () => {
           <a
             className="link-important"
             href="https://www.instagram.com/denisa.d_orinda2021"
+            target="_blank"
+            rel="noreferrer"
           >
             Odkaz na Denisy Instagram →
           </a>

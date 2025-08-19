@@ -5,10 +5,10 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const SofieFlaskovaPage = () => {
+const JanBeladaPage = () => {
   const data = useStaticQuery(graphql`
-    query SofieQ {
-      file(relativePath: { eq: "students/sofie-flaskova.png" }) {
+    query JanQ {
+      file(relativePath: { eq: "students/jan-belada.png" }) {
         childImageSharp {
           gatsbyImageData(width: 200, quality: 90, placeholder: BLURRED)
         }
@@ -18,35 +18,29 @@ const SofieFlaskovaPage = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Sofie Flašková - Orinda Klub Tábor</title>
+        <title>Amálie Zahradníčková - Orinda Klub Tábor</title>
       </Helmet>
       <Container>
         <Link className="link-important" to="/our-students/">
           &#8592; zpět na všechny studenty
         </Link>
         <div className="profile">
-          <GatsbyImage image={getImage(data.file)} alt="Sofie Flašková" />
-          <h1>Sofie Flašková</h1>
-          <small>Medailonek 2022/23</small>
+          <GatsbyImage image={getImage(data.file)} alt="Amálie Zahradníčková" />
+          <h1>Amálie Zahradníčková</h1>
+          <small>Medailonek 2025/26</small>
           <br></br>
           <a
             className="link-important"
-            href="https://www.instagram.com/sofieflaskovaa/"
+            href="https://www.instagram.com/honza.b_orinda2024/"
             target="_blank"
             rel="noreferrer"
           >
             Odkaz na Instagram →
           </a>
           <br></br>
-          {/* <a
-            className="link-important"
-            href="https://www.youtube.com/channel/UCxXUMHrP8OBpI-FSj27GAqw"
-          >
-            Odkaz na YouTube kanál →
-          </a> */}
           <p>
-            Sofie se vrátila z Orindy v lednu 2023. Její dobrodružství můžete
-            sledovat na Instagramu, kam přidávala své dojmy z Kalifornie.
+            Amálie je aktuálně v Orindě. Její dobrodružství můžete sledovat na
+            Instagramu, kam přidává své dojmy z Kalifornie.
           </p>
         </div>
       </Container>
@@ -54,4 +48,4 @@ const SofieFlaskovaPage = () => {
   )
 }
 
-export default SofieFlaskovaPage
+export default JanBeladaPage

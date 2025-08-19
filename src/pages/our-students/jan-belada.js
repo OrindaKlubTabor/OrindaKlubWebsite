@@ -10,7 +10,7 @@ const JanBeladaPage = () => {
     query JanQ {
       file(relativePath: { eq: "students/jan-belada.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 200, quality: 90)
+          gatsbyImageData(width: 200, quality: 90, placeholder: BLURRED)
         }
       }
     }
@@ -32,13 +32,15 @@ const JanBeladaPage = () => {
           <a
             className="link-important"
             href="https://www.instagram.com/honza.b_orinda2024/"
+            target="_blank"
+            rel="noreferrer"
           >
             Odkaz na Instagram →
           </a>
           <br></br>
           <p>
-            Jan je aktuálně v Orindě. Jeho dobrodružství můžete sledovat na
-            Instagramu, kam přidává své dojmy z Kalifornie.
+            Jan se vrátil z Orindy v lednu 2025. Jeho dobrodružství můžete
+            sledovat na Instagramu, kam přidával své dojmy z Kalifornie.
           </p>
         </div>
       </Container>

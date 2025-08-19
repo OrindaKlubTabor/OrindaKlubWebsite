@@ -10,7 +10,7 @@ const EliskaTumovaPage = () => {
     query EliskaQ {
       file(relativePath: { eq: "students/eliska-tumova.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 200, quality: 90)
+          gatsbyImageData(width: 200, quality: 90, placeholder: BLURRED)
         }
       }
     }
@@ -32,6 +32,8 @@ const EliskaTumovaPage = () => {
           <a
             className="link-important"
             href="https://www.instagram.com/eliskatumovaa/"
+            target="_blank"
+            rel="noreferrer"
           >
             Odkaz na Instagram →
           </a>

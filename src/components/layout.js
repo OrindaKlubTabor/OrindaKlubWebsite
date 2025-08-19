@@ -6,6 +6,7 @@ import Hamburger from "hamburger-react"
 import { useState } from "react"
 import { Helmet } from "react-helmet"
 import Popup from "./deadline-popup"
+import { DEADLINE } from "../constants"
 
 export default function Layout({ children }) {
   const [isOpen, setOpen] = useState(false)
@@ -29,7 +30,7 @@ export default function Layout({ children }) {
         <title>Půlrok v USA plný zážitků na celý život - Orinda Klub</title>
         <meta
           name="description"
-          content="Přihlaš se do soutěže 2024! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě."
+          content={`Přihlaš se do soutěže ${DEADLINE.getFullYear()}! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě.`}
         />
       </Helmet>
       <header className="navbar">

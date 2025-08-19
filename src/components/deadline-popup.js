@@ -5,10 +5,11 @@ import { DEADLINE } from "../constants"
 
 const Popup = () => {
   const now = new Date()
+  const nextFallYear = DEADLINE.getFullYear() + 1
 
   const getPopupMessage = () => {
     if (now >= DEADLINE) {
-      return "Přihlašování do soutěže je ukončeno! Děkujeme všem za účast."
+      return `Přihlašování do soutěže je ukončeno! Další ročník soutěže spustíme na podzim ${nextFallYear}.`
     }
 
     const oneMonthBeforeDeadline = new Date(DEADLINE)
