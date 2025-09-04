@@ -5,10 +5,10 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const JanBeladaPage = () => {
+const AmalieZahradnickovaPage = () => {
   const data = useStaticQuery(graphql`
-    query JanQ {
-      file(relativePath: { eq: "students/jan-belada.png" }) {
+    query AmalieQ {
+      file(relativePath: { eq: "students/amalie-zahradnickova.png" }) {
         childImageSharp {
           gatsbyImageData(width: 200, quality: 90, placeholder: BLURRED)
         }
@@ -31,7 +31,7 @@ const JanBeladaPage = () => {
           <br></br>
           <a
             className="link-important"
-            href="https://www.instagram.com/honza.b_orinda2024/"
+            href="https://www.instagram.com/amalie.z.orinda.2025/"
             target="_blank"
             rel="noreferrer"
           >
@@ -48,4 +48,4 @@ const JanBeladaPage = () => {
   )
 }
 
-export default JanBeladaPage
+export default AmalieZahradnickovaPage

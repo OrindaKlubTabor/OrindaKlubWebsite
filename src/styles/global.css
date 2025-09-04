@@ -259,12 +259,6 @@ footer a:hover {
   text-decoration-color: white;
 }
 
-.profile-blue {
-  padding: 2.6rem !important;
-  margin: 1rem 0.5rem;
-  height: 350px;
-}
-
 .profile-blue:hover {
   box-shadow: 0 0px 11px rgba(0, 21, 54, 0.4);
   transition: box-shadow 0.3s;
@@ -280,7 +274,7 @@ a:hover .profile-blue {
   color: #002868;
 }
 
-.profile h2 {
+.profile-blue h2 {
   color: #002868;
 }
 
@@ -290,7 +284,9 @@ a:hover .profile-blue {
 
 .profile {
   text-align: center;
-  padding: 0.5rem 0;
+  padding: 2.6rem 0rem;
+  margin: 1rem 0.5rem;
+  height: 350px;
 }
 
 .profile small {

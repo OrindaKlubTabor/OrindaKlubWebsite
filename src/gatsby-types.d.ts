@@ -3751,6 +3751,11 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type AmalieQQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AmalieQQuery = { readonly file: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
+
 type BackgroundImgPostsOnlyQueryVariables = Exact<{ [key: string]: never; }>;
 
 

@@ -21,7 +21,10 @@ function Student(props) {
     <Link to={"/our-students/" + props.page + "/"}>
       <div
         className="profile profile-blue"
-        style={{ backgroundColor: "#002868", color: "white" }}
+        style={{
+          backgroundColor: props.isInOrinda ? "#cb9b15" : "#002868",
+          color: "white",
+        }}
       >
         {profilePicture && (
           <GatsbyImage image={profilePicture} alt={props.name} />
@@ -29,7 +32,11 @@ function Student(props) {
         <h2 style={{ margin: "1rem 0 0.5rem", textAlign: "center" }}>
           {props.name}
         </h2>
-        <small>Medailonek {props.year}</small>
+        {props.isInOrinda ? (
+          <small>Aktuálně v Orindě</small>
+        ) : (
+          <small>Medailonek {props.year}</small>
+        )}
       </div>
     </Link>
   )
@@ -61,12 +68,13 @@ const OurStudentsPage = () => {
         </p>
       </Container>
       <div className="student-grid">
-        {/* <Student
+        <Student
           name="Amálie Zahradníčková"
           year="2025/2026"
           page="amalie-zahradnickova"
           pictures={pictures}
-        ></Student> */}
+          isInOrinda={true}
+        ></Student>
         <Student
           name="Jan Belada"
           year="2024/2025"

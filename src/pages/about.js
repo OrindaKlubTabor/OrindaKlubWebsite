@@ -109,7 +109,7 @@ export default function About() {
         <p>
           Neváhejte nás kontaktovat na našem emailu{" "}
           <strong>
-            <a href="mailto:orindaklub@gmail.com">orindaklub@gmail.com</a>
+            <a href="mailto:info@orindaklub.cz">info@orindaklub.cz</a>
           </strong>
         </p>
         <p>Můžese se také podívat na webové stránky měst Tábor a Orinda.</p>
