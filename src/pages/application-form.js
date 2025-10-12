@@ -42,6 +42,7 @@ export default function application() {
               }}
               to="https://forms.gle/2UtcZtYhXZrDQg5c6"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Přidej se na náš mailing list &#8594;
             </Link>

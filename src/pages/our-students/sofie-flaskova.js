@@ -33,7 +33,7 @@ const SofieFlaskovaPage = () => {
             className="link-important"
             href="https://www.instagram.com/sofieflaskovaa/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Odkaz na Instagram →
           </a>

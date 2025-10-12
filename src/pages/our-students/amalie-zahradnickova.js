@@ -33,7 +33,7 @@ const AmalieZahradnickovaPage = () => {
             className="link-important"
             href="https://www.instagram.com/amalie.z.orinda.2025/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Odkaz na Instagram →
           </a>

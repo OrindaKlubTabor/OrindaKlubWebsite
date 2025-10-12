@@ -33,7 +33,7 @@ const DenisaDvorakovaPage = () => {
             className="link-important"
             href="https://www.instagram.com/denisa.d_orinda2021"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Odkaz na Denisy Instagram →
           </a>

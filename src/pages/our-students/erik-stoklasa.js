@@ -33,7 +33,7 @@ const ErikStoklasaPage = () => {
             className="link-important"
             href="https://blog.erikstoklasa.cz"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Odkaz na Erikův blog →
           </a>

@@ -33,7 +33,7 @@ const JanBeladaPage = () => {
             className="link-important"
             href="https://www.instagram.com/honza.b_orinda2024/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Odkaz na Instagram →
           </a>

@@ -33,7 +33,7 @@ const EliskaTumovaPage = () => {
             className="link-important"
             href="https://www.instagram.com/eliskatumovaa/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Odkaz na Instagram →
           </a>
