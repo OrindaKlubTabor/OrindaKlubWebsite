@@ -1,0 +1,17 @@
+# robots.txt for orindaklub.cz
+
+User-agent: *
+Allow: /
+
+# Disallow admin/dev pages
+Disallow: /dev-404-page/
+Disallow: /404/
+Disallow: /404.html
+
+# Disallow old competition pages
+Disallow: /prihlas-se-do-souteze-2022/
+Disallow: /prihlas-se-do-souteze-2023/
+Disallow: /prihlas-se-do-souteze-2024/
+
+# Sitemap location
+Sitemap: https://www.orindaklub.cz/sitemap-index.xml
