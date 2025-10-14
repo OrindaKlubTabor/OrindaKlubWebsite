@@ -52,41 +52,42 @@ export default function application() {
             <h2>Obsah přihlášky</h2>
             <p>
               Motivační esej v anglickém jazyce v rozsahu přibližně
-              2 normostrany by měla obsahovat představení tebe, tvojí rodiny a
-              koníčků. Taky nezapomeň připsat důvody, proč chceš studovat na
-              škole v USA, a jaká jsou tvoje očekávání od tohoto studijního
-              pobytu. Dej si na eseji záležet, má totiž v celém procesu
-              rozhodování velkou váhu.
-            </p>
-            <h2>Formátování</h2>
-            <p>
-              Nepřikládej prosím žádné fotografie ani do PDF, ani do přílohy.
-              <h3>Nadpisy</h3>
-              <ul>
-                <li>14pt (pro titulní můžeš použít 28pt)</li>
-                <li>tučné</li>
-                <li>1.5 mezera</li>
-                <li>Times New Roman</li>
-              </ul>
-              <h3>Odstavce</h3>
-              <ul>
-                <li>12pt</li>
-                <li>1.5 mezera</li>
-                <li>Times New Roman</li>
-              </ul>
-            </p>
-            <h2>Kam odeslat přihlášku?</h2>
-            <p>
-              Eseje odesílejte ve formátu PDF na{" "}
-              <strong>apply@orindaklub.cz</strong>
+              2 normostrany (3600 znaků) by měla obsahovat představení tebe,
+              tvojí rodiny a koníčků. Taky nezapomeň připsat důvody, proč chceš
+              studovat na škole v USA, jaká jsou tvoje očekávání od tohoto
+              studijního pobytu a jak pomůžeš naopak rozvoji klubu ty. Dej si na
+              eseji záležet, má totiž v celém procesu rozhodování velkou váhu.
             </p>
             <p>
-              Po přijetí emailu ti dáme vždy vědět, že jsme přihlášku přijali.
-              Kdybys ale nedostal/a potvrzení do pár dnů, tak nám zkus napsat
-              ještě jednou na email nebo na naši Facebook stránku.
+              <strong>Nově můžeš také přiložit video</strong>, ve kterém se
+              můžeš představit a říct, proč bys měl/a vyhrát právě ty. Video ale
+              není povinné a nebudeš nijak penalizován/a, pokud ho nepřiložíš.
+            </p>
+            <h2>Jak odeslat přihlášku?</h2>
+            <p>Eseje odevzdej přes Google formulář:</p>
+            <Link
+              style={{
+                background: "#002868",
+                color: "white",
+                padding: "1rem",
+                display: "inline-block",
+                textDecoration: "none",
+              }}
+              to="https://forms.gle/QCJMYfQBB6ztNWsXA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Otevřít přihlášku &#8594;
+            </Link>
+            <p>
+              Formátování eseje, ani přikládání fotek není možné. Odstavce můžeš
+              oddělovat prázdnými řádky. Doporučujeme ti, abys tvořil/a esej
+              mimo odesílací formulář, předejdeš tak nechtěným ztrátám tvojí
+              eseje. Esej vlož teprve až budeš odesílat přihlášku. Nech si prosím
+              dostatečný čas na vyplnění přihlášky.
             </p>
             <p>
-              Deadline na odeslání eseje:{" "}
+              Deadline na odeslání přihlášky:{" "}
               <strong>
                 {new Intl.DateTimeFormat("cs-CZ", {
                   weekday: "long",
@@ -96,6 +97,11 @@ export default function application() {
                   minute: "numeric",
                 }).format(DEADLINE)}
               </strong>
+            </p>
+            <h2>Technické problémy</h2>
+            <p>
+              Pokud narazíš na jakékoliv technické problémy při vyplňování
+              přihlášky, neváhej se na nás obrátit prostřednictvím emailu.
             </p>
           </>
         )}
