@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap");
 
 html {
   font-family: "Lora", serif;
   color: #2d2d2d;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -18,14 +19,16 @@ a {
   text-decoration: none;
   color: #2d2d2d;
   margin: auto 0;
+  transition: all 0.3s ease;
 }
 
 p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 1.7;
   text-align: left;
 }
+
 li {
   font-family: "Open Sans", sans-serif;
 }
@@ -37,11 +40,13 @@ sup {
 
 h1 {
   font-size: 36px;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 27px;
   font-weight: 600;
+  line-height: 1.4;
 }
 
 h3 {
@@ -50,8 +55,8 @@ h3 {
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #2d2d2d;
+  text-decoration: none;
+  color: #002868;
   cursor: pointer;
 }
 
@@ -75,18 +80,26 @@ header .hamburger-react {
 .navbar-top a {
   font-size: 1.2rem;
   padding: 0;
+  font-weight: 600;
 }
 
 header .links {
   display: none;
   justify-content: space-between;
   flex-direction: column;
+  gap: 0.5rem;
 }
 .links.open {
   display: flex;
 }
 header .links a {
   margin-bottom: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+header .links a:hover {
+  background: #f0f2f5;
 }
 .spacer {
   height: 6rem;
@@ -94,20 +107,25 @@ header .links a {
 }
 .link-important {
   font-weight: 600;
+  color: #002868;
 }
 
 a.link-background {
   background: white;
-  padding: 0.7rem;
+  padding: 0.7rem 1.5rem;
   color: black;
   border: 2px solid white;
   text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 a.link-background:hover {
   background: transparent;
   color: white;
+  transform: translateY(-2px);
 }
+
 .popup {
   width: 100%;
   color: white;
@@ -115,6 +133,7 @@ a.link-background:hover {
   background-color: #cb9b15;
   padding: 1rem;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .post img {
   max-height: 200px;
@@ -172,13 +191,18 @@ header a {
 .landing-image {
   max-width: min(1050px, 100%);
   max-height: 85vh;
-  margin: 0 auto 2rem;
+  margin: 50px auto 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .popover {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   width: 100%;
   padding: 0 1rem 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .popover h2 {
@@ -187,12 +211,21 @@ header a {
 }
 
 .popover a {
-  background: #bf0a30;
-  padding: 0.7rem;
+  background: linear-gradient(135deg, #bf0a30 0%, #d41139 100%);
+  padding: 0.9rem 1.5rem;
   color: white;
   width: 100%;
   display: block;
   text-align: center;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(191, 10, 48, 0.3);
+}
+
+.popover a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(191, 10, 48, 0.4);
 }
 
 .popover img {
@@ -210,7 +243,7 @@ header a {
   position: relative;
 }
 footer {
-  background: #002868;
+  background: linear-gradient(135deg, #001a4d 0%, #002868 100%);
   padding: 4rem 1rem;
   color: white;
   text-align: center;
@@ -218,6 +251,7 @@ footer {
   position: absolute;
   bottom: 0;
   height: 500px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
 footer .width-limiter {
@@ -260,8 +294,9 @@ footer a:hover {
 }
 
 .profile-blue:hover {
-  box-shadow: 0 0px 11px rgba(0, 21, 54, 0.4);
-  transition: box-shadow 0.3s;
+  box-shadow: 0 8px 30px rgba(0, 40, 104, 0.25);
+  transition: all 0.3s ease;
+  transform: translateY(-4px);
 }
 
 a:hover .profile-blue {
@@ -322,7 +357,7 @@ a:hover .profile-blue {
     flex-direction: row;
   }
   .profile-blue {
-    width: 340px;
+    width: 360px;
   }
   .post-img-center img {
     width: auto;
@@ -375,13 +410,16 @@ a:hover .profile-blue {
   header .links a {
     margin: auto 0;
   }
+  header .links a:hover {
+    background: #f0f2f5;
+  }
 
   header a {
     padding: 0.5rem;
   }
 
   .landing-image {
-    margin: 0 auto -200px;
+    margin: 50px auto -200px;
   }
 
   .popover {
@@ -389,7 +427,9 @@ a:hover .profile-blue {
     position: relative;
     top: -125px;
     margin: 0 auto;
-    padding: 1rem 2rem 2rem;
+    padding: 1.5rem 2.5rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   }
 
   .popover h2 {
@@ -399,6 +439,7 @@ a:hover .profile-blue {
   .popover a {
     position: absolute;
     width: auto;
+    padding: 1rem 2rem;
   }
 }
 @media (min-width: 900px) {

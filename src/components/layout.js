@@ -40,7 +40,6 @@ export default function Layout({ children }) {
         </div>
         <div className={isOpen ? "links open" : "links"}>
           <Link to="/about">O nás</Link>
-          <Link to="/blog">Aktuality</Link>
           <Link to="/our-students">Naši studenti</Link>
           <Link to="/faq">FAQ</Link>
           <Link
