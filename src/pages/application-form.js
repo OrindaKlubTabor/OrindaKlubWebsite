@@ -167,8 +167,9 @@ export default function application() {
                 </strong>{" "}
                 <strong>Nově můžeš také přiložit video</strong>, ve kterém se
                 můžeš představit a říct, proč bys měl/a vyhrát právě ty. Ve
-                videu mluv v anglickém jazyce. Video ale není povinné a nebudeš
-                nijak penalizován/a, pokud ho nepřiložíš.
+                videu mluv v anglickém jazyce. Maximální délka videa je 2
+                minuty. Video ale není povinné a nebudeš nijak penalizován/a,
+                pokud ho nepřiložíš.
               </p>
 
               <h2 style={styles.sectionTitle}>Jak odeslat přihlášku?</h2>
