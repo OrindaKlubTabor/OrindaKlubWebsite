@@ -161,9 +161,9 @@ export default function Home() {
                 color: "#4a4a4a",
               }}
             >
-              Nahrávka přednášky o soutěži, která se konala v říjnu 2023 na
-              Gymnáziu Soběslav. Rádi poskytneme přednášku i na vaší škole,
-              neváhejte nás kontaktovat.
+              Nahrávka přednášky o soutěži, která se konala v listopadu 2025 na
+              Gymnáziu Pierra de Coubertina. Rádi poskytneme přednášku i na vaší
+              škole, neváhejte nás kontaktovat.
             </p>
             <div
               id="video"
@@ -176,7 +176,7 @@ export default function Home() {
               }}
             >
               <iframe
-                src="https://www.youtube.com/embed/Na0WP4Yl2cw?si=UlfBwYwmzocCEJyM"
+                src="https://www.youtube.com/embed/F-OSrC95ltU?si=2L3jKERGB4NErXXH"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
