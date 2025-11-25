@@ -153,13 +153,13 @@ export default function application() {
             <>
               <h2 style={styles.sectionTitle}>Obsah přihlášky</h2>
               <p style={styles.paragraph} className="responsive-text">
-                Motivační esej v anglickém jazyce v rozsahu přibližně 2
-                normostrany (3600 znaků) by měla obsahovat představení tebe,
-                tvojí rodiny a koníčků. Taky nezapomeň připsat důvody, proč
-                chceš studovat na škole v USA, jaká jsou tvoje očekávání od
-                tohoto studijního pobytu a jak pomůžeš naopak rozvoji klubu ty.
-                Dej si na eseji záležet, má totiž v celém procesu rozhodování
-                velkou váhu.
+                Motivační esej v anglickém jazyce v rozsahu maximálně 2
+                normostrany (3600 znaků s mezerami) by měla obsahovat
+                představení tebe, tvojí rodiny a koníčků. Taky nezapomeň připsat
+                důvody, proč chceš studovat na škole v USA, jaká jsou tvoje
+                očekávání od tohoto studijního pobytu a jak pomůžeš naopak
+                rozvoji klubu ty. Dej si na eseji záležet, má totiž v celém
+                procesu rozhodování velkou váhu.
               </p>
               <p style={styles.paragraph} className="responsive-text">
                 <strong style={{ color: "#cb9b15", fontSize: "1.1rem" }}>
