@@ -9,7 +9,8 @@ const Popup = () => {
 
   const getPopupMessage = () => {
     if (now >= DEADLINE) {
-      return `Přihlašování do soutěže je ukončeno! Další ročník soutěže spustíme na podzim ${nextFallYear}.`
+      return `Emaily s výsledky byly všem přihlášeným odeslány! Pokud Ti nic nepřišlo, napiš nám na info@orindaklub.cz`
+      // return `Přihlašování do soutěže je ukončeno! Další ročník soutěže spustíme na podzim ${nextFallYear}.`
     }
 
     const oneMonthBeforeDeadline = new Date(DEADLINE)
