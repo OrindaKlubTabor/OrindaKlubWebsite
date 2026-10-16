@@ -39,8 +39,8 @@ const AmalieZahradnickovaPage = () => {
           </a>
           <br></br>
           <p>
-            Amálie je aktuálně v Orindě. Její dobrodružství můžete sledovat na
-            Instagramu, kam přidává své dojmy z Kalifornie.
+            Amálie se už vrátila z Orindy. Její dobrodružství si můžete
+            prohlédnout na Instagramu, kam přidávala své dojmy z Kalifornie.
           </p>
         </div>
       </Container>

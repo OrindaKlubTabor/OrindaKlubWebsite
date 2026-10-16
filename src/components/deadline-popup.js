@@ -5,12 +5,11 @@ import { DEADLINE } from "../constants"
 
 const Popup = () => {
   const now = new Date()
-  const nextFallYear = DEADLINE.getFullYear() + 1
 
   const getPopupMessage = () => {
     if (now >= DEADLINE) {
       return `Emaily s výsledky byly všem přihlášeným odeslány! Pokud Ti nic nepřišlo, napiš nám na info@orindaklub.cz`
-      // return `Přihlašování do soutěže je ukončeno! Další ročník soutěže spustíme na podzim ${nextFallYear}.`
+      // return `Přihlašování do soutěže je ukončeno! Další ročník soutěže spustíme na podzim ${DEADLINE.getFullYear() + 1}.`
     }
 
     const oneMonthBeforeDeadline = new Date(DEADLINE)

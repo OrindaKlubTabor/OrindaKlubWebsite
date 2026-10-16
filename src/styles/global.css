@@ -60,8 +60,12 @@ a:hover {
   cursor: pointer;
 }
 
+.navbar-band {
+  background: #002868;
+}
+
 header {
-  background-color: white;
+  background-color: #002868;
   margin: 0 auto;
   padding: 1rem;
   max-width: 1000px;
@@ -98,8 +102,21 @@ header .links a {
   border-radius: 50px;
   transition: all 0.3s ease;
 }
+header a,
+header a:hover {
+  color: white;
+}
 header .links a:hover {
-  background: #f0f2f5;
+  background: rgba(255, 255, 255, 0.12);
+}
+header .links a.navbar-cta {
+  background: white;
+  color: #002868;
+  font-weight: 600;
+  text-align: center;
+}
+header .links a.navbar-cta:hover {
+  background: #e3e7ef;
 }
 .spacer {
   height: 6rem;
@@ -128,12 +145,16 @@ a.link-background:hover {
 
 .popup {
   width: 100%;
-  color: white;
+  color: #002868;
   height: 100%;
-  background-color: #2196F3;
-  padding: 1rem;
+  background-color: #f4f6fa;
+  border-top: 1px solid #e3e7ef;
+  border-bottom: 1px solid #e3e7ef;
+  padding: 0.75rem 1rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 .post img {
   max-height: 200px;
@@ -284,6 +305,19 @@ footer a:hover {
   color: white;
 }
 
+footer a.footer-legal-link {
+  padding: 0;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+}
+
+footer a.footer-legal-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 .profile-blue h1,
 .profile-blue h2 {
   color: white !important;
@@ -297,6 +331,20 @@ footer a:hover {
   box-shadow: 0 8px 30px rgba(0, 40, 104, 0.25);
   transition: all 0.3s ease;
   transform: translateY(-4px);
+}
+
+.student-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 40, 104, 0.4);
+}
+
+.student-card-orinda:hover {
+  box-shadow: 0 12px 35px rgba(203, 155, 21, 0.4);
 }
 
 a:hover .profile-blue {
@@ -347,11 +395,6 @@ a:hover .profile-blue {
   justify-content: space-around;
 }
 
-@media (min-width: 400px) {
-  p {
-    text-align: justify;
-  }
-}
 @media (min-width: 600px) {
   .student-grid {
     flex-direction: row;
@@ -409,9 +452,6 @@ a:hover .profile-blue {
 
   header .links a {
     margin: auto 0;
-  }
-  header .links a:hover {
-    background: #f0f2f5;
   }
 
   header a {

@@ -3824,6 +3824,11 @@ type ProfileImagesQueryVariables = Exact<{ [key: string]: never; }>;
 
 type ProfileImagesQuery = { readonly allFile: { readonly nodes: ReadonlyArray<{ readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null }> } };
 
+type RadimQQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type RadimQQuery = { readonly file: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null };
+
 type SofieQQueryVariables = Exact<{ [key: string]: never; }>;
 
 

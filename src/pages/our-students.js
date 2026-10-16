@@ -1,41 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
 import Container from "../components/container"
+import PageHeader from "../components/page-header"
+import InitialsAvatar from "../components/initials-avatar"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
-
-const styles = {
-  heroSection: {
-    textAlign: "center",
-    maxWidth: "900px",
-    margin: "0 auto 4rem",
-    padding: "3rem 1.5rem 2rem",
-  },
-  heroTitle: {
-    fontSize: "clamp(2rem, 5vw, 3rem)",
-    marginBottom: "1.5rem",
-    color: "#002868",
-    fontWeight: "700",
-    lineHeight: "1.3",
-  },
-  heroDescription: {
-    fontSize: "1.15rem",
-    lineHeight: "1.8",
-    marginBottom: "2.5rem",
-    color: "#4a4a4a",
-    maxWidth: "750px",
-    margin: "0 auto 2.5rem",
-  },
-  introText: {
-    fontSize: "1.05rem",
-    lineHeight: "1.7",
-    color: "#4a4a4a",
-    maxWidth: "800px",
-    margin: "0 auto 3rem",
-    textAlign: "center",
-  },
-}
 
 function Student(props) {
   const node = props.pictures.allFile.nodes.find(
@@ -54,29 +24,20 @@ function Student(props) {
       style={{ textDecoration: "none" }}
     >
       <div
-        className="profile profile-blue"
+        className={
+          "profile profile-blue student-card" +
+          (props.isInOrinda ? " student-card-orinda" : "")
+        }
         style={{
           backgroundColor: props.isInOrinda ? "#cb9b15" : "#002868",
           color: "white",
-          transition: "all 0.3s ease",
           borderRadius: "16px",
           overflow: "hidden",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
           padding: "3rem 2rem",
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = "translateY(-8px)"
-          e.currentTarget.style.boxShadow = props.isInOrinda
-            ? "0 12px 35px rgba(203, 155, 21, 0.4)"
-            : "0 12px 35px rgba(0, 40, 104, 0.4)"
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = "translateY(0)"
-          e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)"
         }}
       >
         {profilePicture && (
@@ -103,6 +64,16 @@ function Student(props) {
               }}
             />
           </div>
+        )}
+        {!profilePicture && (
+          <InitialsAvatar
+            name={props.name}
+            style={{
+              marginBottom: "1.5rem",
+              background: "rgba(255, 255, 255, 0.15)",
+              color: "white",
+            }}
+          />
         )}
         <h2
           style={{
@@ -159,24 +130,27 @@ const OurStudentsPage = () => {
       </Helmet>
       <Container>
         <div style={{ paddingTop: "2rem" }}>
-          <div style={styles.heroSection}>
-            <h1 style={styles.heroTitle}>Naši studenti</h1>
-            <p style={styles.heroDescription}>
-              Do Orindy jelo už přes 20 studentů a studentek z Tábora. Tady si
-              můžeš přečíst o jejich zážitcích. Každý kdo vyhraje v naší soutěži
-              se automaticky stává členem našeho klubu a pomáhá nám ho rozvíjet
-              nadále. Za celou dobu máme už přes 15 členů.
-            </p>
-          </div>
+          <PageHeader title="Naši studenti">
+            Do Orindy jelo už přes 20 studentů a studentek z Tábora. Tady si
+            můžeš přečíst o jejich zážitcích. Každý kdo vyhraje v naší soutěži
+            se automaticky stává členem našeho klubu a pomáhá nám ho rozvíjet
+            nadále. Za celou dobu máme už přes 15 členů.
+          </PageHeader>
         </div>
       </Container>
       <div className="student-grid">
+        <Student
+          name="Radim Podzimek"
+          year="2026/2027"
+          page="radim-podzimek"
+          pictures={pictures}
+          isInOrinda={true}
+        ></Student>
         <Student
           name="Amálie Zahradníčková"
           year="2025/2026"
           page="amalie-zahradnickova"
           pictures={pictures}
-          isInOrinda={true}
         ></Student>
         <Student
           name="Jan Belada"

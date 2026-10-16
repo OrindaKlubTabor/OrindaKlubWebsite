@@ -1,25 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 import Container from "../components/container"
+import PageHeader from "../components/page-header"
 import { DEADLINE } from "../constants"
 import { Link } from "gatsby"
 
 const styles = {
-  heroSection: {
-    textAlign: "center",
-    maxWidth: "900px",
-    margin: "0 auto 4rem",
-    padding: "3rem 1.5rem 2rem",
-  },
-  heroTitle: {
-    fontSize: "clamp(2rem, 5vw, 3rem)",
-    marginBottom: "1.5rem",
-    color: "#002868",
-    fontWeight: "700",
-    lineHeight: "1.3",
-  },
   sectionTitle: {
-    fontSize: "1.8rem",
+    fontSize: "1.5rem",
     marginTop: 0,
     marginBottom: "1.5rem",
     color: "#002868",
@@ -94,18 +82,6 @@ export default function application() {
   const nextFallYear = DEADLINE.getFullYear() + 1
   return (
     <Layout>
-      <style>
-        {`
-          .responsive-text {
-            text-align: left;
-          }
-          @media (min-width: 768px) {
-            .responsive-text {
-              text-align: justify;
-            }
-          }
-        `}
-      </style>
       <script
         dangerouslySetInnerHTML={{
           __html: `gtag('event', 'conversion', {'send_to': 'AW-16450868697/DqNlCLqZ0o0ZENmrsaQ9'});`,
@@ -113,20 +89,20 @@ export default function application() {
       />
       <Container>
         <div style={{ paddingTop: "2rem" }}>
-          <div style={styles.heroSection}>
-            <h1 style={styles.heroTitle}>Přihlášení do soutěže</h1>
-          </div>
+          <PageHeader
+            title="Přihlášení do soutěže"
+          />
 
           {isClosed ? (
             <div style={styles.closedSection}>
               <h2 style={styles.closedTitle}>Soutěž je ukončená</h2>
-              <p style={styles.closedText} className="responsive-text">
+              <p style={styles.closedText}>
                 Nemusíš se ale strachovat, na podzim {nextFallYear} spouštíme
                 soutěž znovu. Zatím si můžeš přečíst, co budeš k přihlášce
                 potřebovat. Určitě si také přečti některý z předcházejících
                 příspěvků našich studentů z Kalifornie.
               </p>
-              <p style={styles.closedText} className="responsive-text">
+              <p style={styles.closedText}>
                 Přidej se na náš mailing list, aby Ti neunikl další ročník
                 soutěže!
               </p>
@@ -152,7 +128,7 @@ export default function application() {
           ) : (
             <>
               <h2 style={styles.sectionTitle}>Obsah přihlášky</h2>
-              <p style={styles.paragraph} className="responsive-text">
+              <p style={styles.paragraph}>
                 Motivační esej v anglickém jazyce v rozsahu maximálně 2
                 normostrany (3600 znaků s mezerami) by měla obsahovat
                 představení tebe, tvojí rodiny a koníčků. Taky nezapomeň připsat
@@ -161,7 +137,7 @@ export default function application() {
                 rozvoji klubu ty. Dej si na eseji záležet, má totiž v celém
                 procesu rozhodování velkou váhu.
               </p>
-              <p style={styles.paragraph} className="responsive-text">
+              <p style={styles.paragraph}>
                 <strong style={{ color: "#cb9b15", fontSize: "1.1rem" }}>
                   💡 Tip:
                 </strong>{" "}
@@ -173,12 +149,12 @@ export default function application() {
               </p>
 
               <h2 style={styles.sectionTitle}>Jak odeslat přihlášku?</h2>
-              <p style={styles.paragraph} className="responsive-text">
+              <p style={styles.paragraph}>
                 Eseje odevzdej přes Google formulář:
               </p>
               <Link
                 style={styles.primaryButton}
-                to="https://forms.gle/QCJMYfQBB6ztNWsXA"
+                to="https://forms.gle/PoLz9ik1v3uyWkyu8"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={e => {
@@ -194,7 +170,7 @@ export default function application() {
               >
                 Otevřít přihlášku &#8594;
               </Link>
-              <p style={styles.paragraph} className="responsive-text">
+              <p style={styles.paragraph}>
                 Formátování eseje, ani přikládání fotek není možné. Odstavce
                 můžeš oddělovat prázdnými řádky. Doporučujeme ti, abys tvořil/a
                 esej mimo odesílací formulář, předejdeš tak nechtěným ztrátám
@@ -219,6 +195,7 @@ export default function application() {
                     weekday: "long",
                     day: "numeric",
                     month: "long",
+                    year: "numeric",
                     hour: "numeric",
                     minute: "numeric",
                   }).format(DEADLINE)}
@@ -226,7 +203,7 @@ export default function application() {
               </div>
 
               <h2 style={styles.sectionTitle}>Technické problémy</h2>
-              <p style={styles.paragraph} className="responsive-text">
+              <p style={styles.paragraph}>
                 Pokud narazíš na jakékoliv technické problémy při vyplňování
                 přihlášky, neváhej se na nás obrátit prostřednictvím emailu na{" "}
                 <a

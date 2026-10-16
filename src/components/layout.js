@@ -33,24 +33,23 @@ export default function Layout({ children }) {
           content={`Přihlaš se do soutěže ${DEADLINE.getFullYear()}! Zajímá tě, jak se žije v Kalifornii a chtěl/a bys zkusit prozkoumat novou zemi na vlastní pěst? Orinda Klub Tábor pořádá jedinečnou soutěž pro středoškoláky z Tábora. V rámci programu budeš studovat na střední škole v Orindě.`}
         />
       </Helmet>
-      <header className="navbar">
-        <div className="navbar-top">
-          <Link to="/">{data.site.siteMetadata.title}</Link>
-          <Hamburger toggled={isOpen} toggle={setOpen} />
-        </div>
-        <div className={isOpen ? "links open" : "links"}>
-          <Link to="/about">O nás</Link>
-          <Link to="/our-students">Naši studenti</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link
-            style={{ background: "#002868", color: "white", padding: "1rem" }}
-            to="/application-form"
-          >
-            Přihlásit se do soutěže
-            {/* Chci vědět o další soutěži */}
-          </Link>
-        </div>
-      </header>
+      <div className="navbar-band">
+        <header className="navbar">
+          <div className="navbar-top">
+            <Link to="/">{data.site.siteMetadata.title}</Link>
+            <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
+          </div>
+          <div className={isOpen ? "links open" : "links"}>
+            <Link to="/about">O nás</Link>
+            <Link to="/our-students">Naši studenti</Link>
+            <Link to="/faq">FAQ</Link>
+            <Link className="navbar-cta" to="/application-form">
+              Přihlásit se do soutěže
+              {/* Chci vědět o další soutěži */}
+            </Link>
+          </div>
+        </header>
+      </div>
       <Popup />
       {children}
       <footer>
@@ -68,6 +67,11 @@ export default function Layout({ children }) {
             </div>
             <div>
               &copy; {new Date().getFullYear()} {data.site.siteMetadata.title}
+            </div>
+            <div>
+              <Link to="/privacy-policy" className="footer-legal-link">
+                Ochrana osobních údajů
+              </Link>
             </div>
           </div>
           <div>

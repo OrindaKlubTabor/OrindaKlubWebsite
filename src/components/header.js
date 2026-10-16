@@ -1,5 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+import PageHeader from "./page-header"
 
 export default function Header(props) {
   return (
@@ -8,7 +9,7 @@ export default function Header(props) {
         <title>{props.headerText} - Orinda Klub Tábor</title>
         <meta name="description" content={props.description} />
       </Helmet>
-      <h1>{props.headerText}</h1>
+      <PageHeader title={props.headerText} />
     </div>
   )
 }

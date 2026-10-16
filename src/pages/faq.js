@@ -1,22 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import Container from "../components/container"
+import PageHeader from "../components/page-header"
 import { Helmet } from "react-helmet"
 
 const styles = {
-  heroSection: {
-    textAlign: "center",
-    maxWidth: "900px",
-    margin: "0 auto 4rem",
-    padding: "3rem 1.5rem 2rem",
-  },
-  heroTitle: {
-    fontSize: "clamp(2rem, 5vw, 3rem)",
-    marginBottom: "1.5rem",
-    color: "#002868",
-    fontWeight: "700",
-    lineHeight: "1.3",
-  },
   questionTitle: {
     fontSize: "1.4rem",
     marginTop: "2.5rem",
@@ -45,18 +33,6 @@ const styles = {
 export default function faq() {
   return (
     <Layout>
-      <style>
-        {`
-          .responsive-text {
-            text-align: left;
-          }
-          @media (min-width: 768px) {
-            .responsive-text {
-              text-align: justify;
-            }
-          }
-        `}
-      </style>
       <Helmet>
         <title>FAQ - Nejčastější otázky - Orinda Klub Tábor</title>
         <meta
@@ -66,12 +42,10 @@ export default function faq() {
       </Helmet>
       <Container>
         <div style={{ paddingTop: "2rem" }}>
-          <div style={styles.heroSection}>
-            <h1 style={styles.heroTitle}>FAQ - Nejčastější otázky</h1>
-          </div>
+          <PageHeader title="Nejčastější otázky" />
 
           <h2 style={styles.questionTitle}>Kde jsou studenti ubytováni?</h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             Studenti jsou vždy ubytováni u hostitelských rodin vybíraných tak,
             aby co nejvíce vyhovovaly potřebám a zájmům studenta/ky.
           </p>
@@ -79,7 +53,7 @@ export default function faq() {
           <h2 style={styles.questionTitle}>
             V jakém termínu se uskutečňuje studijní pobyt?
           </h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             O výhře se zpravidla studenti dozvídají během února. Během dalších
             několika měsíců probíhá vyřizování potřebných náležitostí, mezi
             které patří i získání víza. Odlet je obvykle naplánován na začátek
@@ -90,18 +64,17 @@ export default function faq() {
           </p>
 
           <h2 style={styles.questionTitle}>Co všechno student/ka dostane?</h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             Výherci je hrazeno ubytování, jídlo i studium na střední škole.
             Výherce si zaplatí jen náklady na vízum (cca do 10 tis. Kč) a
             letenku. Letenku ale výherci proplatíme, tyto peníze využívá
-            student/ka jako své kapesné na pobyt v USA. Celková peněžní hodnota
-            výhry se pohybuje okolo 300 000 Kč.
+            student/ka jako své kapesné na pobyt v USA.
           </p>
 
           <h2 style={styles.questionTitle}>
             Jak se v případě výhry řeší studium v ČR?
           </h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             Záleží na tom, z jaké školy student je. Někdo skládá komisionální
             zkoušky, někdo má individuální studijní plán a někomu stačí dopsat
             testy za celé pololetí. Vše je o domluvě s učiteli a ředitelem dané
@@ -111,7 +84,7 @@ export default function faq() {
           <h2 style={styles.questionTitle}>
             Jakou kvalitu má střední škola v Orindě?
           </h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             Miramonte High School je ve svém okolí jednou z nejlépe hodnocených
             škol, dokonce se pravidelně objevuje v žebříčku nejlepších státních
             středních škol v celé Kalifornii. Nadaní studenti pravidelně
@@ -122,7 +95,7 @@ export default function faq() {
           <h2 style={styles.questionTitle}>
             Má se student na koho obrátit v případě jakýchkoli problémů?
           </h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             Samozřejmostí je maximální podpora hostitelské rodiny, která přijímá
             studenta/ku jako svého syna/dceru. V případě např. jazykových nebo
             jiných vážnějších problémů jsou vždy připraveni pomoci mj. i dva
@@ -134,7 +107,7 @@ export default function faq() {
           <h2 style={styles.questionTitle}>
             Jak častý kontakt s domovem se doporučuje?
           </h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             Vzhledem k chtěnému a očekávanému jazykovému progresu se klade důraz
             na to, aby student hovořil česky co nejméně. Doporučujeme si s
             rodinou volat přibližně jednou za 14 dní.
@@ -143,7 +116,7 @@ export default function faq() {
           <h2 style={styles.questionTitle}>
             Můžu se do soutěže přihlásit, i když jsem minulý rok nevyhrál/a?
           </h2>
-          <p style={styles.paragraph} className="responsive-text">
+          <p style={styles.paragraph}>
             No jasně! Spousta studentů se hlásí do soutěže několikrát. Když se
             přihlásíš několikrát, tak uvidíme, že ti na soutěži opravdu záleží.
           </p>
