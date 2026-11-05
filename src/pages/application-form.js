@@ -89,9 +89,7 @@ export default function application() {
       />
       <Container>
         <div style={{ paddingTop: "2rem" }}>
-          <PageHeader
-            title="Přihlášení do soutěže"
-          />
+          <PageHeader title="Přihlášení do soutěže" />
 
           {isClosed ? (
             <div style={styles.closedSection}>
@@ -143,8 +141,8 @@ export default function application() {
                 </strong>{" "}
                 <strong>Nově můžeš také přiložit video</strong>, ve kterém se
                 můžeš představit a říct, proč bys měl/a vyhrát právě ty. Ve
-                videu mluv v anglickém jazyce. Na kvalitě obrazu nám nezáleží, stačí použít telefon. 
-                Maximální délka videa je 2 minuty.
+                videu mluv v anglickém jazyce. Na kvalitě obrazu nám nezáleží,
+                stačí použít telefon. Maximální délka videa je 2 minuty.
               </p>
 
               <h2 style={styles.sectionTitle}>Jak odeslat přihlášku?</h2>
